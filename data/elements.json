@@ -4,47 +4,47 @@
     "name": "炎",
     "color": "#ff763c",
     "primaryEffect": "燃焼・範囲攻撃",
-    "icon": "assets/icons/fire.png",
-    "projectile": "assets/projectiles/fire_0.png"
+    "icon": "assets/icons/fire.svg",
+    "projectile": "assets/projectiles/fire_0.svg"
   },
   {
     "id": "water",
     "name": "水",
     "color": "#51b6f5",
     "primaryEffect": "貫通・押し戻し",
-    "icon": "assets/icons/water.png",
-    "projectile": "assets/projectiles/water_0.png"
+    "icon": "assets/icons/water.svg",
+    "projectile": "assets/projectiles/water_0.svg"
   },
   {
     "id": "ice",
     "name": "氷",
     "color": "#b9efff",
     "primaryEffect": "減速・凍結",
-    "icon": "assets/icons/ice.png",
-    "projectile": "assets/projectiles/ice_0.png"
+    "icon": "assets/icons/ice.svg",
+    "projectile": "assets/projectiles/ice_0.svg"
   },
   {
     "id": "lightning",
     "name": "雷",
     "color": "#ffda5d",
     "primaryEffect": "高速・連鎖",
-    "icon": "assets/icons/lightning.png",
-    "projectile": "assets/projectiles/lightning_0.png"
+    "icon": "assets/icons/lightning.svg",
+    "projectile": "assets/projectiles/lightning_0.svg"
   },
   {
     "id": "wind",
     "name": "風",
     "color": "#72eab1",
     "primaryEffect": "拡散・多段",
-    "icon": "assets/icons/wind.png",
-    "projectile": "assets/projectiles/wind_0.png"
+    "icon": "assets/icons/wind.svg",
+    "projectile": "assets/projectiles/wind_0.svg"
   },
   {
     "id": "earth",
     "name": "土",
     "color": "#bb8a60",
     "primaryEffect": "防御・破砕",
-    "icon": "assets/icons/earth.png",
-    "projectile": "assets/projectiles/earth_0.png"
+    "icon": "assets/icons/earth.svg",
+    "projectile": "assets/projectiles/earth_0.svg"
   }
 ]

@@ -2,7 +2,7 @@
   {
     "id": "lava_titan",
     "name": "灼熱の巨人",
-    "asset": "assets/bosses/lava_titan.png",
+    "asset": "assets/bosses/lava_titan.svg",
     "patterns": [
       "giant_fireball",
       "lava_floor",
@@ -13,7 +13,7 @@
   {
     "id": "frost_queen",
     "name": "氷晶の女王",
-    "asset": "assets/bosses/frost_queen.png",
+    "asset": "assets/bosses/frost_queen.svg",
     "patterns": [
       "ice_fan",
       "freeze_floor",
@@ -24,7 +24,7 @@
   {
     "id": "abyss_eye",
     "name": "深淵の魔眼",
-    "asset": "assets/bosses/abyss_eye.png",
+    "asset": "assets/bosses/abyss_eye.svg",
     "patterns": [
       "ring",
       "homing",

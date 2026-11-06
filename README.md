@@ -4,7 +4,7 @@
 
 > **ステータス：企画仕様 + オリジナル・スターターアート + ブラウザ試作版。** 完成したゲームやAPKではありません。名称・画風・実装数値は暫定です。
 
-![ゲーム画面コンセプト（実機画面ではなく素材の配置例）](assets/previews/mobile_mockup.png)
+![ゲーム画面コンセプト（実機画面ではなく素材の配置例）](assets/previews/mobile_mockup.svg)
 
 ## コンセプト
 
@@ -26,13 +26,13 @@
 | `docs/TECHNICAL_PLAN.md` | 拡張しやすい実装構造とデータの責務分担 |
 | `docs/BACKLOG.md` | 初期版〜APK化までの優先順位と受け入れ条件 |
 | `data/*.json` | 属性6種類、合成魔法15種類、敵・ボス・部屋・障害物データ |
-| `assets/characters/` | 主人公：上下左右2コマ、RGBA PNG |
-| `assets/enemies/` | 雑魚敵6種類×2コマ、RGBA PNG |
-| `assets/bosses/` | ボス3種類、RGBA PNG |
+| `assets/characters/` | 主人公：上下左右2コマ、RGBA SVG |
+| `assets/enemies/` | 雑魚敵6種類×2コマ、RGBA SVG |
+| `assets/bosses/` | ボス3種類、RGBA SVG |
 | `assets/tiles/` | 4テーマの床バリエーションと壁、32×32px |
 | `assets/obstacles/` | 木箱・樽・岩・結晶・柱・燭台、32×32px |
-| `assets/projectiles/` | 属性弾・敵弾・合成弾、RGBA PNG |
-| `assets/icons/` | 属性アイコン6種類、RGBA PNG |
+| `assets/projectiles/` | 属性弾・敵弾・合成弾、RGBA SVG |
+| `assets/icons/` | 属性アイコン6種類、RGBA SVG |
 | `assets/previews/` | 素材カタログ、画面構成イメージ、ビジュアル構想ボード |
 | `tools/generate_art.py` | スターターアートの再生成用Pythonスクリプト |
 | `tools/validate.py` | 画像透過・寸法・データ参照の整合性チェック |
@@ -40,9 +40,9 @@
 
 ## 素材一覧
 
-![オリジナルのピクセルアート素材一覧](assets/previews/asset_catalog.png)
+![オリジナルのピクセルアート素材一覧](assets/previews/asset_catalog.svg)
 
-ゲーム用PNGは独立ファイルで収録。プレビューは**最近傍拡大**した表示例です。背景には床タイルを敷き詰め、障害物は透過PNGで重ねます。プレビューは方向性の確認用であり、**実際のゲームのスクリーンショットではありません**。
+ゲーム用SVGは独立ファイルで収録。プレビューは**最近傍拡大**した表示例です。背景には床タイルを敷き詰め、障害物は透過SVGで重ねます。プレビューは方向性の確認用であり、**実際のゲームのスクリーンショットではありません**。
 
 ## ブラウザ試作版
 
@@ -70,3 +70,6 @@ python -m http.server 8000
 - **提案・暫定：** 正式名称、ドット絵の細部、6属性の初期内訳、15合成の具体的な効果、各アイテム性能、部屋数、敵数、選択画面の詳細、エンジン、永続強化。
 
 このリポジトリは既存の `radio-roam` 等とは**独立**した新規ゲーム企画として設計しています。
+### GitHub登録画像について
+
+このリポジトリには**GitHub向けに描き直した独立SVG素材**を収録しています。先に作成した**オリジナルPNG版と完全に同一の画像ではありません**。元のPNG一式はチャットで配布したプロジェクトZIPに保存されています。

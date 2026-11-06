@@ -1,37 +1,37 @@
 [
   {
     "id": "crate",
-    "asset": "assets/obstacles/crate.png",
+    "asset": "assets/obstacles/crate.svg",
     "blocksMovement": true,
     "blocksProjectiles": true
   },
   {
     "id": "barrel",
-    "asset": "assets/obstacles/barrel.png",
+    "asset": "assets/obstacles/barrel.svg",
     "blocksMovement": true,
     "blocksProjectiles": true
   },
   {
     "id": "boulder",
-    "asset": "assets/obstacles/boulder.png",
+    "asset": "assets/obstacles/boulder.svg",
     "blocksMovement": true,
     "blocksProjectiles": true
   },
   {
     "id": "crystal_cluster",
-    "asset": "assets/obstacles/crystal_cluster.png",
+    "asset": "assets/obstacles/crystal_cluster.svg",
     "blocksMovement": true,
     "blocksProjectiles": true
   },
   {
     "id": "pillar",
-    "asset": "assets/obstacles/pillar.png",
+    "asset": "assets/obstacles/pillar.svg",
     "blocksMovement": true,
     "blocksProjectiles": true
   },
   {
     "id": "brazier",
-    "asset": "assets/obstacles/brazier.png",
+    "asset": "assets/obstacles/brazier.svg",
     "blocksMovement": true,
     "blocksProjectiles": false
   }

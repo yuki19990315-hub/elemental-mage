@@ -1,0 +1,56 @@
+[
+  {
+    "id": "slime",
+    "name": "スライム",
+    "asset": "assets/enemies/slime_0.png",
+    "patterns": [
+      "chase",
+      "split",
+      "charge"
+    ]
+  },
+  {
+    "id": "eyeball",
+    "name": "魔眼",
+    "asset": "assets/enemies/eyeball_0.png",
+    "patterns": [
+      "aimed",
+      "homing"
+    ]
+  },
+  {
+    "id": "cultist",
+    "name": "魔導師",
+    "asset": "assets/enemies/cultist_0.png",
+    "patterns": [
+      "fan",
+      "ring"
+    ]
+  },
+  {
+    "id": "crystal",
+    "name": "結晶体",
+    "asset": "assets/enemies/crystal_0.png",
+    "patterns": [
+      "laser",
+      "ricochet"
+    ]
+  },
+  {
+    "id": "bat",
+    "name": "コウモリ",
+    "asset": "assets/enemies/bat_0.png",
+    "patterns": [
+      "rush",
+      "spread"
+    ]
+  },
+  {
+    "id": "golem",
+    "name": "ゴーレム",
+    "asset": "assets/enemies/golem_0.png",
+    "patterns": [
+      "shockwave"
+    ]
+  }
+]

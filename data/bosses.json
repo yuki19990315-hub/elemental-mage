@@ -1,0 +1,35 @@
+[
+  {
+    "id": "lava_titan",
+    "name": "灼熱の巨人",
+    "asset": "assets/bosses/lava_titan.png",
+    "patterns": [
+      "giant_fireball",
+      "lava_floor",
+      "enrage"
+    ],
+    "phases": 2
+  },
+  {
+    "id": "frost_queen",
+    "name": "氷晶の女王",
+    "asset": "assets/bosses/frost_queen.png",
+    "patterns": [
+      "ice_fan",
+      "freeze_floor",
+      "summon"
+    ],
+    "phases": 2
+  },
+  {
+    "id": "abyss_eye",
+    "name": "深淵の魔眼",
+    "asset": "assets/bosses/abyss_eye.png",
+    "patterns": [
+      "ring",
+      "homing",
+      "rotating_laser"
+    ],
+    "phases": 2
+  }
+]

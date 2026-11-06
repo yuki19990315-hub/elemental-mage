@@ -1,0 +1,52 @@
+[
+  {
+    "id": "start",
+    "required": true,
+    "bossPathOnly": false
+  },
+  {
+    "id": "combat",
+    "required": false,
+    "bossPathOnly": false
+  },
+  {
+    "id": "waves",
+    "required": false,
+    "bossPathOnly": false
+  },
+  {
+    "id": "treasure",
+    "required": false,
+    "bossPathOnly": false
+  },
+  {
+    "id": "heal",
+    "required": false,
+    "bossPathOnly": false
+  },
+  {
+    "id": "elite",
+    "required": false,
+    "bossPathOnly": false
+  },
+  {
+    "id": "event",
+    "required": false,
+    "bossPathOnly": false
+  },
+  {
+    "id": "hidden",
+    "required": false,
+    "bossPathOnly": false
+  },
+  {
+    "id": "preboss_choice",
+    "required": true,
+    "bossPathOnly": true
+  },
+  {
+    "id": "boss",
+    "required": true,
+    "bossPathOnly": false
+  }
+]

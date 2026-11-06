@@ -1,0 +1,38 @@
+[
+  {
+    "id": "crate",
+    "asset": "assets/obstacles/crate.png",
+    "blocksMovement": true,
+    "blocksProjectiles": true
+  },
+  {
+    "id": "barrel",
+    "asset": "assets/obstacles/barrel.png",
+    "blocksMovement": true,
+    "blocksProjectiles": true
+  },
+  {
+    "id": "boulder",
+    "asset": "assets/obstacles/boulder.png",
+    "blocksMovement": true,
+    "blocksProjectiles": true
+  },
+  {
+    "id": "crystal_cluster",
+    "asset": "assets/obstacles/crystal_cluster.png",
+    "blocksMovement": true,
+    "blocksProjectiles": true
+  },
+  {
+    "id": "pillar",
+    "asset": "assets/obstacles/pillar.png",
+    "blocksMovement": true,
+    "blocksProjectiles": true
+  },
+  {
+    "id": "brazier",
+    "asset": "assets/obstacles/brazier.png",
+    "blocksMovement": true,
+    "blocksProjectiles": false
+  }
+]

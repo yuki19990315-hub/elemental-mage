@@ -1,0 +1,167 @@
+[
+  {
+    "id": "fire_water",
+    "elements": [
+      "fire",
+      "water"
+    ],
+    "name": "高圧蒸気",
+    "effect": "範囲継続ダメージと行動妨害",
+    "asset": "assets/projectiles/fusion_fire_water.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "fire_ice",
+    "elements": [
+      "fire",
+      "ice"
+    ],
+    "name": "熱衝撃波",
+    "effect": "大ダメージと減速",
+    "asset": "assets/projectiles/fusion_fire_ice.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "fire_lightning",
+    "elements": [
+      "fire",
+      "lightning"
+    ],
+    "name": "プラズマランス",
+    "effect": "高速貫通攻撃",
+    "asset": "assets/projectiles/fusion_fire_lightning.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "fire_wind",
+    "elements": [
+      "fire",
+      "wind"
+    ],
+    "name": "炎の竜巻",
+    "effect": "移動する炎の継続ダメージ",
+    "asset": "assets/projectiles/fusion_fire_wind.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "earth_fire",
+    "elements": [
+      "earth",
+      "fire"
+    ],
+    "name": "溶岩弾",
+    "effect": "命中地点に溶岩を残す",
+    "asset": "assets/projectiles/fusion_earth_fire.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "ice_water",
+    "elements": [
+      "ice",
+      "water"
+    ],
+    "name": "氷河の奔流",
+    "effect": "前方範囲の氷水波",
+    "asset": "assets/projectiles/fusion_ice_water.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "lightning_water",
+    "elements": [
+      "lightning",
+      "water"
+    ],
+    "name": "放電水球",
+    "effect": "周囲へ連鎖放電",
+    "asset": "assets/projectiles/fusion_lightning_water.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "water_wind",
+    "elements": [
+      "water",
+      "wind"
+    ],
+    "name": "水刃の雨",
+    "effect": "拡散する水刃",
+    "asset": "assets/projectiles/fusion_water_wind.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "earth_water",
+    "elements": [
+      "earth",
+      "water"
+    ],
+    "name": "泥の牢獄",
+    "effect": "移動速度低下",
+    "asset": "assets/projectiles/fusion_earth_water.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "ice_lightning",
+    "elements": [
+      "ice",
+      "lightning"
+    ],
+    "name": "雷氷の連鎖",
+    "effect": "凍結と連鎖電撃",
+    "asset": "assets/projectiles/fusion_ice_lightning.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "ice_wind",
+    "elements": [
+      "ice",
+      "wind"
+    ],
+    "name": "ブリザード",
+    "effect": "広域凍結嵐",
+    "asset": "assets/projectiles/fusion_ice_wind.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "earth_ice",
+    "elements": [
+      "earth",
+      "ice"
+    ],
+    "name": "氷晶の壁",
+    "effect": "防御と接触ダメージ",
+    "asset": "assets/projectiles/fusion_earth_ice.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "lightning_wind",
+    "elements": [
+      "lightning",
+      "wind"
+    ],
+    "name": "雷嵐",
+    "effect": "範囲内へ落雷",
+    "asset": "assets/projectiles/fusion_lightning_wind.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "earth_lightning",
+    "elements": [
+      "earth",
+      "lightning"
+    ],
+    "name": "磁場崩壊",
+    "effect": "引き寄せと電撃",
+    "asset": "assets/projectiles/fusion_earth_lightning.png",
+    "cooldownSeconds": 8
+  },
+  {
+    "id": "earth_wind",
+    "elements": [
+      "earth",
+      "wind"
+    ],
+    "name": "砂嵐",
+    "effect": "視界妨害と継続ダメージ",
+    "asset": "assets/projectiles/fusion_earth_wind.png",
+    "cooldownSeconds": 8
+  }
+]

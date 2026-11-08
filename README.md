@@ -73,3 +73,14 @@ python -m http.server 8000
 ### GitHub登録画像について
 
 このリポジトリには**GitHub向けに描き直した独立SVG素材**を収録しています。先に作成した**オリジナルPNG版と完全に同一の画像ではありません**。元のPNG一式はチャットで配布したプロジェクトZIPに保存されています。
+
+## 新規デザイン案（2026-11）
+
+追加敵5体、無属性＋8属性、ボス3体の差分を**コンセプトアート**として追加しました。
+
+- [追加敵のデザインボード](assets/concepts/boards/new_enemy_concepts.svg)
+- [属性アイコン・仕様ボード](assets/concepts/boards/attribute_icons_concepts.svg)
+- [ボス差分のデザインボード](assets/concepts/boards/boss_motion_concepts.svg)
+- [追加アート仕様と未実装事項](docs/ADDITIONAL_ART_CONCEPTS.md)
+
+個別SVGは `assets/concepts/enemies/`、`assets/concepts/icons/`、`assets/concepts/bosses/` に収録。これらは以前生成したPNG資料とは別のベクター素材です。

@@ -225,19 +225,36 @@ function updateShots(dt){
     }
     let obstacle=false;
     for(const o of walls){if(Math.hypot(s.x-o.x,s.y-o.y)<s.r+o.r){obstacle=true;break;}}
-    if(obstacle){if(s.bounce>0){s.angle+=Math.PI;s.bounce--;}else{shots.splice(i,1);continue;}}
+    if(obstacle){if(s.bounce>0){s.angle+=Math.PI;s.bounce--;}else{if(s.friendly)M.terrainReact(fields,s.element,s.x,s.y);shots.splice(i,1);continue;}}
     if(s.friendly){
-      for(const m of enemies){if(dist(s,m)<s.r+m.r&&!s.hitIds.has(m.id)){s.hitIds.add(m.id);damageMob(m,s.damage,s.element,s.angle);if(s.pierce>0)s.pierce--;else{shots.splice(i,1);obstacle=true;}break;}}
+      for(const m of enemies){
+        const part=m.parts?.find(p=>p.hp>0&&Math.hypot(s.x-m.x-p.dx,s.y-m.y-p.dy)<s.r+7);
+        if(part&&!s.hitIds.has(m.id)){
+          s.hitIds.add(m.id);M.breakPart(m,part,s.damage);
+          if(s.pierce>0)s.pierce--;else{shots.splice(i,1);obstacle=true;}
+          break;
+        }
+        if(dist(s,m)<s.r+m.r&&!s.hitIds.has(m.id)){
+          s.hitIds.add(m.id);damageMob(m,s.damage,s.element,s.angle);
+          if(s.pierce>0)s.pierce--;else{shots.splice(i,1);obstacle=true;}
+          break;
+        }
+      }
       if(obstacle)continue;
-      if(s.destroyBullets){for(let j=shots.length-1;j>=0;j--){const e=shots[j];if(e!==s&&!e.friendly&&dist(e,s)<e.r+s.r+5)shots.splice(j,1);}}
+      if(s.destroyBullets){for(let j=shots.length-1;j>=0;j--){const e=shots[j];if(e!==s&&!e.friendly&&dist(e,s)<e.r+s.r+5){shots.splice(j,1);M.absorb(player,1);}}}
     }else if(dist(s,player)<s.r+9){damagePlayer(s.damage,s.angle);shots.splice(i,1)}
+    else{
+      for(const m of enemies){if(m.id!==s.sourceId&&dist(s,m)<s.r+m.r){m.hp-=M.friendlyFireDamage(s.damage);shots.splice(i,1);break;}}
+    }
   }
 }
 function updateFields(dt){for(let i=fields.length-1;i>=0;i--){const f=fields[i];f.life-=dt;
   if(f.type==='void'){for(const m of enemies){const d=dist(m,f);if(d<f.r){m.x+=((f.x-m.x)/(d||1))*25*dt;m.y+=((f.y-m.y)/(d||1))*25*dt;m.hp-=f.damage*dt;}}
-    for(let j=shots.length-1;j>=0;j--){if(!shots[j].friendly&&dist(shots[j],f)<f.r)shots.splice(j,1);}}
+    for(let j=shots.length-1;j>=0;j--){if(!shots[j].friendly&&dist(shots[j],f)<f.r){shots.splice(j,1);M.absorb(player,1);}}}
   if(f.type==='shield'){for(const m of enemies)if(dist(m,f)<f.r)m.hp-=f.damage*dt;
-    for(let j=shots.length-1;j>=0;j--)if(!shots[j].friendly&&dist(shots[j],f)<f.r)shots.splice(j,1);}
+    for(let j=shots.length-1;j>=0;j--)if(!shots[j].friendly&&dist(shots[j],f)<f.r){shots.splice(j,1);M.absorb(player,1);}}
+  if(f.type==='electrified'){for(const m of enemies)if(dist(m,f)<f.r)m.hp-=f.damage*dt;}
+  if(f.type==='frozen'||f.type==='steam'){for(const m of enemies)if(dist(m,f)<f.r)m.slow=Math.max(m.slow,.25);}
   if(f.type==='lava'&&dist(f,player)<f.r)damagePlayer(f.damage);
   if(f.life<=0)fields.splice(i,1);
 }}
@@ -251,6 +268,16 @@ function update(dt){
     if(!L.dashHitsObstacle(player.x,player.y,nx,ny,walls,9)){player.x=nx;player.y=ny;}
   }
   for(let i=0;i<3;i++)if(down[i]||kbd[['KeyJ','KeyK','KeyL'][i]])cast(i);
+  if(player.familiar&&enemies.length){
+    player.familiarCooldown-=dt;
+    if(player.familiarCooldown<=0){
+      const target=enemies.reduce((a,b)=>dist(player,a)<dist(player,b)?a:b);
+      const angle=Math.atan2(target.y-player.y,target.x-player.x);
+      const el=player.gear.find(e=>e!=='neutral')||'neutral';
+      spawnShot(player.x+18,player.y-17,angle,260,el,8,true,{r:5});
+      player.familiarCooldown=1.35;
+    }
+  }
   for(const m of enemies)updateMob(m,dt);
   updateShots(dt);updateFields(dt);
   for(let i=pickups.length-1;i>=0;i--)if(dist(pickups[i],player)<18){const p=pickups.splice(i,1)[0];pickupElement(p.element);break;}
@@ -268,6 +295,7 @@ function drawMob(m){
   const file=`../assets/sprites/v2/${base}/${id}/${state}.png`;
   const fallback=m.isBoss?`bosses/${legacyBoss[m.kind]}`:`enemies/${legacyEnemy[m.kind]||'slime'}_0`;
   if(!sprite(file,m.x-size/2,m.y-size*.64,size,size))oldSVG(fallback,m.x-size/2,m.y-size*.64,size,size);
+  if(m.parts)for(const part of m.parts)if(part.hp>0){disk(m.x+part.dx,m.y+part.dy,6,'#a5f6ff','#5c6fff');}
   if(m.hitFx>0){ctx.fillStyle='#fff9';ctx.fillRect(m.x-m.r,m.y-m.r,m.r*2,m.r*2);}
   const w=m.isBoss?72:35;
   ctx.fillStyle='#171025';ctx.fillRect(m.x-w/2,m.y-m.r-15,w,5);
@@ -282,11 +310,13 @@ function drawWorld(){
   for(let y=64;y<520;y+=64){envTile('wall',(Math.floor(y/64)%4),0,y,64,64);envTile('wall',(Math.floor(y/64+1)%4),296,y,64,64)}
   for(const o of walls)drawObstacle(o);
   for(const f of fields){if(f.type==='laser'){drawBeam(f.x,f.y,f.angle,420,'#fff1ac',9,clamp(f.life/.18,0,1));continue;}
-    disk(f.x,f.y,f.r,f.type==='lava'?'#f6533d66':f.type==='shield'?'#79dfe857':'#a65eff55');}
+    const shades={lava:'#f6533d66',shield:'#79dfe857',wet:'#4a99fa77',electrified:'#efe276a8',frozen:'#91ecff91',steam:'#d6d1d18a',void:'#a65eff55'};
+    disk(f.x,f.y,f.r,shades[f.type]||'#a65eff55');}
   for(const p of pickups){disk(p.x,p.y,13,color(p.element)+'88','#ffffff');drawElementIcon(p.element,p.x-9,p.y-9,18)}
   for(const m of enemies)drawMob(m);
   for(const b of shots){const hue=b.friendly?color(b.element==='fusion'?player.gear[0]:b.element):color(b.element);disk(b.x,b.y,b.r,hue,b.friendly?'#ffffff':'#751d38');
     sprite('../'+b.spritePath,b.x-(b.friendly?12:9),b.y-(b.friendly?12:9),b.friendly?24:18,b.friendly?24:18);}
+  if(player.familiar){disk(player.x+18+Math.cos(frameTick*3)*9,player.y-22+Math.sin(frameTick*3)*7,7,'#94e3ff','#f8f9ff');}
   const angle=player.angle,dir=Math.abs(Math.cos(angle))>Math.abs(Math.sin(angle))?(Math.cos(angle)>0?'right':'left'):(Math.sin(angle)>0?'down':'up');
   if(player.inv===0||Math.floor(frameTick*13)%2===0)oldSVG('characters/mage_'+dir+'_'+(Math.floor(frameTick*7)%2),player.x-17,player.y-17,34,34);
 }
@@ -298,6 +328,8 @@ function drawHud(){
   ctx.fillStyle='#0d1028ea';ctx.fillRect(8,8,344,56);
   ctx.fillStyle='#44354a';ctx.fillRect(43,20,154,14);ctx.fillStyle='#5fe5a0';ctx.fillRect(43,20,154*player.hp/player.maxHp,14);
   labelText('HP '+Math.ceil(player.hp)+'/'+player.maxHp,42,53,12);
+  ctx.fillStyle='#715495';ctx.fillRect(205,39,69,4);ctx.fillStyle='#b7e4ff';ctx.fillRect(205,39,69*(player.mana/100),4);
+  labelText('M '+Math.floor(player.mana),279,45,10,'#c5eeff');
   labelText(boss?'BOSS':'FLOOR '+stage+' / '+room+'-3',227,30,13);
   if(boss)labelText(bossNames[enemies[0]?.kind]||'BOSS',227,52,12);
   ctx.fillStyle='#131320c9';ctx.fillRect(0,519,360,121);

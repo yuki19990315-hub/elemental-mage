@@ -8,7 +8,10 @@
       "lava_floor",
       "enrage"
     ],
-    "phases": 2
+    "phases": 2,
+    "spriteId": "boss_fire_giant",
+    "spritePack": "assets/sprites/v2/bosses/boss_fire_giant/",
+    "status": "prototype_pending_sprite_review"
   },
   {
     "id": "frost_queen",
@@ -19,7 +22,10 @@
       "freeze_floor",
       "summon"
     ],
-    "phases": 2
+    "phases": 2,
+    "spriteId": "boss_ice_queen",
+    "spritePack": "assets/sprites/v2/bosses/boss_ice_queen/",
+    "status": "prototype_pending_sprite_review"
   },
   {
     "id": "abyss_eye",
@@ -30,6 +36,9 @@
       "homing",
       "rotating_laser"
     ],
-    "phases": 2
+    "phases": 2,
+    "spriteId": "boss_abyss_eye",
+    "spritePack": "assets/sprites/v2/bosses/boss_abyss_eye/",
+    "status": "prototype_pending_sprite_review"
   }
 ]

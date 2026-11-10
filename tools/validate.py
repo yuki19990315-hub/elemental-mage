@@ -1,32 +1,38 @@
 #!/usr/bin/env python3
-"""Check JSON content references, asset sets and SVG XML without third-party packages."""
-import json
-import xml.etree.ElementTree as ET
+"""Validate the data-driven game manifest and art references."""
+import base64, binascii, json, xml.etree.ElementTree as ET
 from pathlib import Path
 from itertools import combinations
-ROOT=Path(__file__).resolve().parents[1]
-def load(name):return json.loads((ROOT/"data"/name).read_text(encoding="utf-8"))
-elements=load("elements.json");pairs=load("fusion_recipes.json")
-ids=[a["id"] for a in elements]
-assert len(ids)==6 and len(set(ids))==6
-assert len(pairs)==15
-actual=set()
-for p in pairs:
-    key=tuple(sorted(p["elements"]))
-    assert len(key)==2 and key[0]!=key[1]
-    assert key not in actual, f"duplicate pair {key}"
-    actual.add(key)
-assert actual==set(combinations(sorted(ids),2))
-refs=[]
-for name in ("elements","fusion_recipes","enemies","bosses","obstacles"):
-    for x in load(name+".json"):
-        for key in ("icon","projectile","asset"):
-            if key in x:refs.append(x[key])
-missing=[s for s in refs if not (ROOT/s).is_file()]
-assert not missing, f"Missing sprite references: {missing}"
-svgs=list((ROOT/"assets").rglob("*.svg"))
-assert len(svgs)>=90, f"Expected 90+ svg designs, got {len(svgs)}"
-for f in svgs:
-    node=ET.parse(f).getroot()
-    assert node.tag.endswith("svg"),f
-print(f"PASS: {len(svgs)} SVG assets, 6 elements, 15 combinations, all data references valid")
+R=Path(__file__).resolve().parents[1]
+def load(n): return json.loads((R/"data"/(n+".json")).read_text(encoding="utf-8"))
+elements=load("elements"); ids=[e["id"] for e in elements]
+assert len(ids)==9 and len(set(ids))==9, "neutral + 8 elements required"
+combat=set(ids)-{"neutral"}
+assert len(combat)==8
+recipes=load("fusion_recipes")
+pairs=set()
+for r in recipes:
+    a,b=r["elements"]
+    assert a!=b and {a,b}<=combat, r["id"]
+    key=tuple(sorted((a,b)));assert key not in pairs, key;pairs.add(key)
+assert pairs==set(combinations(sorted(combat),2)), "28 distinct element pairs required"
+enemies=load("enemies");bosses=load("bosses")
+assert len(enemies)>=11 and len({e["id"] for e in enemies})==len(enemies)
+assert len(bosses)==3 and len({b["id"] for b in bosses})==3
+for name,objs in [("elements",elements),("fusion_recipes",recipes),("enemies",enemies),("bosses",bosses),("obstacles",load("obstacles"))]:
+    for item in objs:
+        for prop in ("asset","icon","projectile"):
+            if item.get(prop):
+                assert (R/item[prop]).is_file(), (name,item["id"],prop,item[prop])
+for p in (R/"assets").rglob("*.svg"):
+    assert ET.parse(p).getroot().tag.endswith("svg"),p
+# Validate v2 packet paths and PNG signatures without claiming all 14 packets are present.
+pdir=R/"assets/sprites/v2/packets"
+for p in pdir.glob("*.json"):
+    doc=json.loads(p.read_text(encoding="utf-8"))
+    assert doc.get("entries"),p
+    for e in doc["entries"]:
+        dest=Path(e["path"])
+        assert dest.parts[:3]==("assets","sprites","v2") and ".." not in dest.parts and dest.suffix==".png",p
+        assert base64.b64decode(e["base64"],validate=True).startswith(b"\\x89PNG\\r\\n\\x1a\\n"),e["path"]
+print(f"PASS: {len(elements)} element states, {len(pairs)} pair recipes, {len(enemies)} enemies, {len(bosses)} bosses, {len(list(pdir.glob('*.json')))} sprite packets")

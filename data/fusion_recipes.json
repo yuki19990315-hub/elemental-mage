@@ -163,5 +163,161 @@
     "effect": "視界妨害と継続ダメージ",
     "asset": "assets/projectiles/fusion_earth_wind.svg",
     "cooldownSeconds": 8
+  },
+  {
+    "id": "fire_light",
+    "elements": [
+      "fire",
+      "light"
+    ],
+    "name": "未確定（炎×光）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_fire_light.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "dark_fire",
+    "elements": [
+      "fire",
+      "dark"
+    ],
+    "name": "未確定（炎×闇）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_dark_fire.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "light_water",
+    "elements": [
+      "water",
+      "light"
+    ],
+    "name": "未確定（水×光）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_light_water.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "dark_water",
+    "elements": [
+      "water",
+      "dark"
+    ],
+    "name": "未確定（水×闇）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_dark_water.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "ice_light",
+    "elements": [
+      "ice",
+      "light"
+    ],
+    "name": "未確定（氷×光）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_ice_light.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "dark_ice",
+    "elements": [
+      "ice",
+      "dark"
+    ],
+    "name": "未確定（氷×闇）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_dark_ice.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "light_lightning",
+    "elements": [
+      "lightning",
+      "light"
+    ],
+    "name": "未確定（雷×光）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_light_lightning.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "dark_lightning",
+    "elements": [
+      "lightning",
+      "dark"
+    ],
+    "name": "未確定（雷×闇）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_dark_lightning.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "light_wind",
+    "elements": [
+      "wind",
+      "light"
+    ],
+    "name": "未確定（風×光）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_light_wind.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "dark_wind",
+    "elements": [
+      "wind",
+      "dark"
+    ],
+    "name": "未確定（風×闇）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_dark_wind.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "earth_light",
+    "elements": [
+      "earth",
+      "light"
+    ],
+    "name": "未確定（土×光）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_earth_light.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "dark_earth",
+    "elements": [
+      "earth",
+      "dark"
+    ],
+    "name": "未確定（土×闇）",
+    "effect": "設計待ち（合成効果未確定）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_dark_earth.svg",
+    "cooldownSeconds": null
+  },
+  {
+    "id": "dark_light",
+    "elements": [
+      "light",
+      "dark"
+    ],
+    "name": "虚空特異点",
+    "effect": "重力崩壊と対消滅（倍率案2.5倍）",
+    "status": "design_only",
+    "asset": "assets/projectiles/fusion_dark_light.svg",
+    "cooldownSeconds": null
   }
 ]

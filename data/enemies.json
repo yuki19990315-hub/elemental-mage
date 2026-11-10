@@ -7,7 +7,9 @@
       "chase",
       "split",
       "charge"
-    ]
+    ],
+    "spriteId": "slime",
+    "spritePack": "assets/sprites/v2/enemies/slime/"
   },
   {
     "id": "eyeball",
@@ -16,7 +18,9 @@
     "patterns": [
       "aimed",
       "homing"
-    ]
+    ],
+    "spriteId": "evil_eye",
+    "spritePack": "assets/sprites/v2/enemies/evil_eye/"
   },
   {
     "id": "cultist",
@@ -25,7 +29,9 @@
     "patterns": [
       "fan",
       "ring"
-    ]
+    ],
+    "spriteId": "dark_mage",
+    "spritePack": "assets/sprites/v2/enemies/dark_mage/"
   },
   {
     "id": "crystal",
@@ -34,7 +40,9 @@
     "patterns": [
       "laser",
       "ricochet"
-    ]
+    ],
+    "spriteId": "crystal_beast",
+    "spritePack": "assets/sprites/v2/enemies/crystal_beast/"
   },
   {
     "id": "bat",
@@ -43,7 +51,9 @@
     "patterns": [
       "rush",
       "spread"
-    ]
+    ],
+    "spriteId": "night_bat",
+    "spritePack": "assets/sprites/v2/enemies/night_bat/"
   },
   {
     "id": "golem",
@@ -51,6 +61,78 @@
     "asset": "assets/enemies/golem_0.svg",
     "patterns": [
       "shockwave"
-    ]
+    ],
+    "spriteId": "stone_golem",
+    "spritePack": "assets/sprites/v2/enemies/stone_golem/"
+  },
+  {
+    "id": "poison_slime",
+    "name": "ポイズンスライム",
+    "asset": "assets/concepts/enemies/poison_slime.svg",
+    "patterns": [
+      "bounce_chase",
+      "red_charge_telegraph",
+      "charge",
+      "obstacle_collision_stun"
+    ],
+    "description": "毒スライムが跳躍接近し赤い予測線の後に突進。障害物衝突で気絶。",
+    "spriteId": "poison_slime",
+    "spritePack": "assets/sprites/v2/enemies/poison_slime/",
+    "status": "design_ai_pending"
+  },
+  {
+    "id": "crystal_golem",
+    "name": "蒼氷の結晶体",
+    "asset": "assets/concepts/enemies/crystal_golem.svg",
+    "patterns": [
+      "heavy_walk",
+      "ricochet_ice_shards",
+      "shoulder_charge"
+    ],
+    "description": "高耐久氷ゴーレム。壁反射弾と重い体当たり。",
+    "spriteId": "crystal_golem",
+    "spritePack": "assets/sprites/v2/enemies/crystal_golem/",
+    "status": "design_ai_pending"
+  },
+  {
+    "id": "abyss_eye",
+    "name": "深淵の魔眼",
+    "asset": "assets/concepts/enemies/abyss_eye.svg",
+    "patterns": [
+      "hover",
+      "homing_electric_orb",
+      "blink_pulse"
+    ],
+    "description": "浮遊し追尾電撃弾を放つ魔眼。",
+    "spriteId": "abyss_eye",
+    "spritePack": "assets/sprites/v2/enemies/abyss_eye/",
+    "status": "design_ai_pending"
+  },
+  {
+    "id": "sorcerer_light",
+    "name": "光輝の使徒",
+    "asset": "assets/concepts/enemies/sorcerer_light.svg",
+    "patterns": [
+      "chant_telegraph",
+      "fast_holy_ray",
+      "keep_distance"
+    ],
+    "description": "遠距離から詠唱し高速の直線聖光を放つ神官。",
+    "spriteId": "sorcerer_light",
+    "spritePack": "assets/sprites/v2/enemies/sorcerer_light/",
+    "status": "design_ai_pending"
+  },
+  {
+    "id": "phantom_dark",
+    "name": "深淵の彷徨者",
+    "asset": "assets/concepts/enemies/phantom_dark.svg",
+    "patterns": [
+      "spiral_dark_bullets",
+      "sudden_dash"
+    ],
+    "description": "螺旋の暗黒弾幕と突発加速の突進を繰り出す亡霊。",
+    "spriteId": "phantom_dark",
+    "spritePack": "assets/sprites/v2/enemies/phantom_dark/",
+    "status": "design_ai_pending"
   }
 ]

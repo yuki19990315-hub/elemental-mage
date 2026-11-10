@@ -1,50 +1,103 @@
 [
   {
+    "id": "neutral",
+    "name": "無属性",
+    "color": "#d7caff",
+    "primaryEffect": "純粋魔力・初期状態",
+    "normalAttack": "魔力弾",
+    "icon": "assets/concepts/icons/neutral.svg",
+    "projectile": "assets/projectiles/neutral_0.svg",
+    "status": "initial_state",
+    "aliases": []
+  },
+  {
     "id": "fire",
     "name": "炎",
     "color": "#ff763c",
-    "primaryEffect": "燃焼・範囲攻撃",
+    "primaryEffect": "継続燃焼・範囲爆破",
     "icon": "assets/icons/fire.svg",
-    "projectile": "assets/projectiles/fire_0.svg"
+    "projectile": "assets/projectiles/fire_0.svg",
+    "normalAttack": "火炎弾",
+    "status": "design",
+    "aliases": []
   },
   {
     "id": "water",
     "name": "水",
     "color": "#51b6f5",
-    "primaryEffect": "貫通・押し戻し",
+    "primaryEffect": "直線貫通・強力ノックバック",
     "icon": "assets/icons/water.svg",
-    "projectile": "assets/projectiles/water_0.svg"
+    "projectile": "assets/projectiles/water_0.svg",
+    "normalAttack": "激流槍",
+    "status": "design",
+    "aliases": []
   },
   {
     "id": "ice",
     "name": "氷",
     "color": "#b9efff",
-    "primaryEffect": "減速・凍結",
+    "primaryEffect": "移動減速・凍結",
     "icon": "assets/icons/ice.svg",
-    "projectile": "assets/projectiles/ice_0.svg"
+    "projectile": "assets/projectiles/ice_0.svg",
+    "normalAttack": "氷晶刃",
+    "status": "design",
+    "aliases": []
   },
   {
     "id": "lightning",
     "name": "雷",
     "color": "#ffda5d",
-    "primaryEffect": "高速・連鎖",
+    "primaryEffect": "超高速弾・連鎖放電",
     "icon": "assets/icons/lightning.svg",
-    "projectile": "assets/projectiles/lightning_0.svg"
+    "projectile": "assets/projectiles/lightning_0.svg",
+    "normalAttack": "迅雷針",
+    "status": "design",
+    "aliases": [
+      "thunder"
+    ]
   },
   {
     "id": "wind",
     "name": "風",
     "color": "#72eab1",
-    "primaryEffect": "拡散・多段",
+    "primaryEffect": "扇状拡散・多段切断",
     "icon": "assets/icons/wind.svg",
-    "projectile": "assets/projectiles/wind_0.svg"
+    "projectile": "assets/projectiles/wind_0.svg",
+    "normalAttack": "風裂刃",
+    "status": "design",
+    "aliases": []
   },
   {
     "id": "earth",
     "name": "土",
     "color": "#bb8a60",
-    "primaryEffect": "防御・破砕",
+    "primaryEffect": "重量破砕・敵弾相殺",
     "icon": "assets/icons/earth.svg",
-    "projectile": "assets/projectiles/earth_0.svg"
+    "projectile": "assets/projectiles/earth_0.svg",
+    "normalAttack": "巨石弾",
+    "status": "design",
+    "aliases": []
+  },
+  {
+    "id": "light",
+    "name": "光",
+    "color": "#fff0b0",
+    "primaryEffect": "高速貫通光条・盲目・治癒",
+    "normalAttack": "聖光線",
+    "icon": "assets/concepts/icons/light.svg",
+    "projectile": "assets/projectiles/light_0.svg",
+    "status": "design",
+    "aliases": []
+  },
+  {
+    "id": "dark",
+    "name": "闇",
+    "color": "#aa64ed",
+    "primaryEffect": "重力吸引・敵弾吸収・侵蝕",
+    "normalAttack": "深淵弾",
+    "icon": "assets/concepts/icons/dark.svg",
+    "projectile": "assets/projectiles/dark_0.svg",
+    "status": "design",
+    "aliases": []
   }
 ]

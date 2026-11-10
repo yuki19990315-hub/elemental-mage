@@ -84,3 +84,13 @@ python -m http.server 8000
 - [追加アート仕様と未実装事項](docs/ADDITIONAL_ART_CONCEPTS.md)
 
 個別SVGは `assets/concepts/enemies/`、`assets/concepts/icons/`、`assets/concepts/bosses/` に収録。これらは以前生成したPNG資料とは別のベクター素材です。
+
+
+## モンスター・ボスのリデザイン素材 v2
+
+追加のデザイン候補は通常・上位敵11体＋ボス3体で、元画像7枚を **112個の透過PNGフレーム**と **14個のアトラス**へ変換する仕様です。
+
+- [素材構成・サイズ・注意事項](docs/SPRITE_PACK_V2.md)
+- [4×4元画像を自動分割するPythonスクリプト](tools/split_sprite_sheet_v2.py)
+
+**状態:** デザイン候補の切り出し・素材パック作成は済みですが、GitHubへのPNGファイル本体の転送は未完了です。既存のゲーム用画像は変更せず、データ・スクリプトを先行登録しています。

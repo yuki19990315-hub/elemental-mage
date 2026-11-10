@@ -15,6 +15,24 @@ const bossNames={lava_titan:'灼熱の巨人',frost_queen:'氷晶の女王',abys
 const eStats={slime:[30,38,11],eyeball:[38,23,11],cultist:[43,21,11],crystal:[54,21,13],bat:[30,52,10],golem:[90,18,18],poison_slime:[56,39,16],crystal_golem:[135,16,21],abyss_eye:[65,24,13],sorcerer_light:[60,20,13],phantom_dark:[70,39,14]};
 const bStats={lava_titan:[310,16,32],frost_queen:[270,21,29],abyss_eye_boss:[310,18,31]};
 const cache=new Map();
+const ENV_THEMES=['cursed_stone','ice_sanctum','lava_temple','abyss_shrine','holy_ruins'];
+const ENV_PROPS={
+  crate:['cursed_crate','rune_crate'],barrel:['iron_barrel','chained_barrel'],
+  pillar:['broken_pillar','rune_pillar'],brazier:['arcane_brazier','violet_brazier'],
+  crystal_cluster:['azure_crystal_cluster','amethyst_crystal_cluster'],
+  boulder:['rune_boulder','rune_core_boulder']
+};
+function theme(){return ENV_THEMES[(stage-1)%ENV_THEMES.length]}
+function envTile(kind,index,x,y,w=64,h=64){
+  const file='../assets/environment/v2/tiles/'+theme()+'/'+kind+'_'+index+'.png';
+  if(!sprite(file,x,y,w,h))oldSVG('tiles/'+(theme()==='ice_sanctum'?'ice':theme()==='lava_temple'?'lava':'stone')+'_'+(kind==='floor'?'floor_'+(index%4):'wall'),x,y,w,h);
+}
+function drawObstacle(o){
+  const picture=o.art||ENV_PROPS[o.kind]?.[0];
+  if(!picture||!sprite('../assets/environment/v2/props/'+picture+'.png',o.x-26,o.y-27,52,52))
+    oldSVG('obstacles/'+o.kind,o.x-17,o.y-17,34,34);
+}
+
 const buttons=[{x:201,y:569,r:26},{x:263,y:569,r:26},{x:325,y:569,r:28}];
 const kbd={},down=[false,false,false],pointers=[null,null,null],stick={pointer:null,x:0,y:0};
 let cfg={elements:null,recipes:new Map(),enemies:null,bosses:null};
@@ -54,7 +72,7 @@ function resetRoom(isBoss){
   for(let i=0;i<(boss?2:3+Math.min(2,stage));i++){
     const x=rand(72,287),y=rand(158,399);
     if(Math.hypot(x-player.x,y-player.y)<88)continue;
-    walls.push({x,y,r:14,kind:choice(objects)});
+    const kind=choice(objects),art=choice(ENV_PROPS[kind]);walls.push({x,y,r:14,kind,art,hp:kind==='brazier'?50:38});
   }
   if(boss){
     const names=['lava_titan','frost_queen','abyss_eye_boss'];
@@ -248,9 +266,9 @@ function drawMob(m){
 }
 function drawWorld(){
   ctx.fillStyle='#242036';ctx.fillRect(0,0,W,H);
-  for(let y=0;y<640;y+=32)for(let x=0;x<360;x+=32)oldSVG('tiles/stone_floor_'+(((x+y)/32)%4|0),x,y,32,32);
-  for(let y=64;y<520;y+=32){oldSVG('tiles/stone_wall',0,y,32,32);oldSVG('tiles/stone_wall',328,y,32,32)}
-  for(const o of walls)oldSVG('obstacles/'+o.kind,o.x-17,o.y-17,34,34);
+  for(let y=0;y<640;y+=64)for(let x=0;x<360;x+=64)envTile('floor',((x/64+2*y/64)%4)|0,x,y);
+  for(let y=64;y<520;y+=64){envTile('wall',(Math.floor(y/64)%4),0,y,64,64);envTile('wall',(Math.floor(y/64+1)%4),296,y,64,64)}
+  for(const o of walls)drawObstacle(o);
   for(const f of fields){if(f.type==='laser'){drawBeam(f.x,f.y,f.angle,420,'#fff1ac',9,clamp(f.life/.18,0,1));continue;}
     disk(f.x,f.y,f.r,f.type==='lava'?'#f6533d66':f.type==='shield'?'#79dfe857':'#a65eff55');}
   for(const p of pickups){disk(p.x,p.y,13,color(p.element)+'88','#ffffff');drawElementIcon(p.element,p.x-9,p.y-9,18)}

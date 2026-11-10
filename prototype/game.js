@@ -76,7 +76,7 @@ function resetRoom(isBoss){
   for(let i=0;i<(boss?2:3+Math.min(2,stage));i++){
     const x=rand(72,287),y=rand(158,399);
     if(Math.hypot(x-player.x,y-player.y)<88)continue;
-    const kind=choice(objects),art=choice(ENV_PROPS[kind]);walls.push({x,y,r:14,kind,art,hp:kind==='brazier'?50:38});
+    const kind=choice(objects),art=choice(ENV_PROPS[kind]);walls.push({x,y,r:14,kind,art,hp:kind==='brazier'?50:38,blocksShots:kind!=='brazier'});
   }
   if(boss){
     const names=['lava_titan','frost_queen','abyss_eye_boss'];
@@ -106,7 +106,7 @@ function damagePlayer(dmg,knockAngle=null){if(player.inv>0||mode!=='battle')retu
 }
 function spawnShot(x,y,angle,speed,element,damage,friendly,opts={}){
   if(shots.length>=320)return;
-  shots.push({x,y,angle,speed,element,damage:friendly?Math.round(damage*M.damageMultiplier(player,element)):damage,sourceId:friendly?0:activeShooter,friendly,spritePath:opts.spritePath||((friendly&&element==='fusion')?'assets/projectiles/fusion_fire_water.svg':(friendly?'assets/projectiles/'+element+'_0.svg':'assets/projectiles/'+(element==='enemy_orb'?'enemy_orb_0':element+'_0')+'.svg')),r:opts.r||5,life:opts.life||3,hitIds:new Set(),homing:opts.homing||0,bounce:opts.bounce||0,pierce:opts.pierce||0,spin:opts.spin||0,destroyBullets:!!opts.destroyBullets});
+  shots.push({x,y,angle,speed,element,damage:friendly?Math.round(damage*M.damageMultiplier(player,element)):damage,sourceId:friendly?0:activeShooter,friendly,spritePath:opts.spritePath||((friendly&&element==='fusion')?'assets/projectiles/fusion_fire_water.svg':(friendly?'assets/projectiles/'+element+'_0.svg':'assets/projectiles/'+(element==='enemy_orb'?'enemy_orb_0':element+'_0')+'.svg')),r:opts.r||5,life:opts.life||3,hitIds:new Set(),homing:opts.homing||0,bounce:opts.bounce||0,pierce:(opts.pierce||0)+(friendly&&player.mutations.includes('piercing')?1:0),spin:opts.spin||0,destroyBullets:!!opts.destroyBullets});
 }
 function fusion(){const key=L.pairKey(player.gear[0],player.gear[1]);return key?cfg.recipes.get(key)||{name:'合成魔法',status:'design_only'}:null;}
 function cast(slot){
@@ -218,13 +218,26 @@ function updateShots(dt){
     const s=shots[i];s.life-=dt;
     if(s.homing&&player&&mode==='battle')s.angle=L.steerAngle(s.angle,Math.atan2(player.y-s.y,player.x-s.x),s.homing*dt);
     s.angle+=s.spin*dt;s.x+=Math.cos(s.angle)*s.speed*dt;s.y+=Math.sin(s.angle)*s.speed*dt;
+    if(s.friendly&&['lightning','ice','fire'].includes(s.element)){
+      M.terrainReact(fields,s.element,s.x,s.y);
+    }
     if(s.life<=0){shots.splice(i,1);continue;}
     if(s.x<area.l+s.r||s.x>area.r-s.r||s.y<area.t+s.r||s.y>area.b-s.r){
       if(s.bounce>0){if(s.x<area.l+s.r||s.x>area.r-s.r)s.angle=Math.PI-s.angle;if(s.y<area.t+s.r||s.y>area.b-s.r)s.angle=-s.angle;s.x=clamp(s.x,area.l+s.r,area.r-s.r);s.y=clamp(s.y,area.t+s.r,area.b-s.r);s.bounce--;}
       else{shots.splice(i,1);continue;}
     }
     let obstacle=false;
-    for(const o of walls){if(Math.hypot(s.x-o.x,s.y-o.y)<s.r+o.r){obstacle=true;break;}}
+    for(let oi=walls.length-1;oi>=0;oi--){
+      const o=walls[oi];
+      if(o.blocksShots!==false&&Math.hypot(s.x-o.x,s.y-o.y)<s.r+o.r){
+        obstacle=true;
+        if(s.friendly){o.hp-=s.damage;if(o.hp<=0){
+          walls.splice(oi,1);
+          if(Math.random()<.25)pickups.push({x:o.x,y:o.y,element:choice(L.ELEMENTS)});
+        }}
+        break;
+      }
+    }
     if(obstacle){if(s.bounce>0){s.angle+=Math.PI;s.bounce--;}else{if(s.friendly)M.terrainReact(fields,s.element,s.x,s.y);shots.splice(i,1);continue;}}
     if(s.friendly){
       for(const m of enemies){
@@ -314,7 +327,7 @@ function drawWorld(){
     disk(f.x,f.y,f.r,shades[f.type]||'#a65eff55');}
   for(const p of pickups){disk(p.x,p.y,13,color(p.element)+'88','#ffffff');drawElementIcon(p.element,p.x-9,p.y-9,18)}
   for(const m of enemies)drawMob(m);
-  for(const b of shots){const hue=b.friendly?color(b.element==='fusion'?player.gear[0]:b.element):color(b.element);disk(b.x,b.y,b.r,hue,b.friendly?'#ffffff':'#751d38');
+  for(const b of shots){const hue=b.friendly?color(b.element==='fusion'?player.gear[0]:b.element):color(b.element);disk(b.x,b.y,b.r+(b.friendly&&(player.mastery[b.element]||0)>=25?2:0),hue,b.friendly?'#ffffff':'#751d38');
     sprite('../'+b.spritePath,b.x-(b.friendly?12:9),b.y-(b.friendly?12:9),b.friendly?24:18,b.friendly?24:18);}
   if(player.familiar){disk(player.x+18+Math.cos(frameTick*3)*9,player.y-22+Math.sin(frameTick*3)*7,7,'#94e3ff','#f8f9ff');}
   const angle=player.angle,dir=Math.abs(Math.cos(angle))>Math.abs(Math.sin(angle))?(Math.cos(angle)>0?'right':'left'):(Math.sin(angle)>0?'down':'up');

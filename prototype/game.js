@@ -1,6 +1,7 @@
 'use strict';
 /* Elemental Mage: data-driven vertical playable prototype. Not a finished APK. */
 const L=globalThis.ElementalLogic;
+const M=globalThis.ElementalMechanics;
 const canvas=document.querySelector('#game'),ctx=canvas.getContext('2d',{alpha:false});
 ctx.imageSmoothingEnabled=false;
 const W=360,H=640,area={l:39,r:321,t:77,b:515},TWO=Math.PI*2;
@@ -38,6 +39,7 @@ const kbd={},down=[false,false,false],pointers=[null,null,null],stick={pointer:n
 let cfg={elements:null,recipes:new Map(),enemies:null,bosses:null};
 let mode='altar',player=null,enemies=[],shots=[],walls=[],pickups=[],fields=[],rewardOptions=[],selected=null;
 let stage=1,room=1,boss=false,elapsed=0,frameTick=0,cooldowns=[0,0,0],uid=0,swapFromPreboss=false;
+let mutationOptions=[],routeChoice='safe',activeShooter=0;
 function clamp(v,a,b){return L.clamp(v,a,b)}
 function choice(arr){return arr[Math.floor(Math.random()*arr.length)]}
 function dist(a,b){return Math.hypot(a.x-b.x,a.y-b.y)}
@@ -57,11 +59,13 @@ async function loadData(){
 function createMob(kind,x,y,isBoss=false){
   const [base,speed,r]=(isBoss?bStats[kind]:eStats[kind])||[48,25,12];
   const hp=Math.round(base*(1+Math.min(4,stage-1)*.24));
-  return {id:++uid,kind,x,y,r,hp,maxHp:hp,speed,isBoss,clock:rand(0,5),cool:rand(.75,1.7),state:'approach',stateTime:0,lockAngle:0,dashSpeed:0,stun:0,attackFx:0,hitFx:0,burn:0,slow:0,freeze:0,freezeHits:0,immune:0};
+  const mob={id:++uid,kind,x,y,r,hp,maxHp:hp,speed,isBoss,clock:rand(0,5),cool:rand(.75,1.7),state:'approach',stateTime:0,lockAngle:0,dashSpeed:0,stun:0,attackFx:0,hitFx:0,burn:0,slow:0,freeze:0,freezeHits:0,immune:0};
+  if(isBoss)mob.parts=[{dx:-20,dy:-7,hp:52},{dx:20,dy:-7,hp:52}];
+  return mob;
 }
 function start(){
-  player={x:180,y:425,angle:-Math.PI/2,hp:100,maxHp:100,gear:['neutral','neutral'],inv:0};
-  stage=1;room=1;cooldowns=[0,0,0];mode='altar';rewardOptions=randomElements(2);selected=null;swapFromPreboss=false;
+  player={x:180,y:425,angle:-Math.PI/2,hp:100,maxHp:100,gear:['neutral','neutral'],inv:0,mana:0,mastery:{},mutations:[],familiar:false,familiarCooldown:1,cursedPower:0};
+  stage=1;room=1;cooldowns=[0,0,0];mode='altar';rewardOptions=randomElements(2);selected=null;swapFromPreboss=false;mutationOptions=[];routeChoice='safe';
   enemies=[];shots=[];walls=[];pickups=[];fields=[];
 }
 function randomElements(num){return [...L.ELEMENTS].sort(()=>Math.random()-.5).slice(0,num)}
@@ -81,16 +85,18 @@ function resetRoom(isBoss){
     const base=['slime','eyeball','cultist','crystal','bat','golem'];
     const advanced=['poison_slime','crystal_golem','abyss_eye','sorcerer_light','phantom_dark'];
     const variants=stage===1?[...base,'poison_slime']:stage===2?[...base,...advanced.slice(0,3)]:[...base,...advanced];
-    for(let i=0,n=3+Math.min(3,stage);i<n;i++){
+    for(let i=0,n=3+Math.min(3,stage)+(routeChoice==='danger'?2:0);i<n;i++){
       const a=(i/n)*TWO,x=clamp(180+118*Math.cos(a),area.l+25,area.r-25),y=clamp(277+125*Math.sin(a),area.t+25,area.b-40);
       enemies.push(createMob(choice(variants),x,y));
     }
   }
 }
 function advance(){
-  if(boss){stage++;room=1;player.hp=Math.min(player.maxHp,player.hp+25);resetRoom(false)}
-  else if(room>=3){mode='preboss';rewardOptions=randomElements(2)}
-  else{room++;resetRoom(false)}
+  if(boss){stage++;room=1;player.hp=Math.min(player.maxHp,player.hp+25);mode='route';}
+  else if(room===1){mode='mutation';mutationOptions=M.randomMutations(player.mutations);}
+  else if(room===2&&stage>1){mode='curse';}
+  else if(room>=3){mode='preboss';rewardOptions=randomElements(2);}
+  else{room++;resetRoom(false);}
 }
 function startSwap(el){selected=el;swapFromPreboss=false;mode='swap';}
 function pickupElement(el){if(!el)return;startSwap(el)}
@@ -100,7 +106,7 @@ function damagePlayer(dmg,knockAngle=null){if(player.inv>0||mode!=='battle')retu
 }
 function spawnShot(x,y,angle,speed,element,damage,friendly,opts={}){
   if(shots.length>=320)return;
-  shots.push({x,y,angle,speed,element,damage,friendly,spritePath:opts.spritePath||((friendly&&element==='fusion')?'assets/projectiles/fusion_fire_water.svg':(friendly?'assets/projectiles/'+element+'_0.svg':'assets/projectiles/'+(element==='enemy_orb'?'enemy_orb_0':element+'_0')+'.svg')),r:opts.r||5,life:opts.life||3,hitIds:new Set(),homing:opts.homing||0,bounce:opts.bounce||0,pierce:opts.pierce||0,spin:opts.spin||0,destroyBullets:!!opts.destroyBullets});
+  shots.push({x,y,angle,speed,element,damage:friendly?Math.round(damage*M.damageMultiplier(player,element)):damage,sourceId:friendly?0:activeShooter,friendly,spritePath:opts.spritePath||((friendly&&element==='fusion')?'assets/projectiles/fusion_fire_water.svg':(friendly?'assets/projectiles/'+element+'_0.svg':'assets/projectiles/'+(element==='enemy_orb'?'enemy_orb_0':element+'_0')+'.svg')),r:opts.r||5,life:opts.life||3,hitIds:new Set(),homing:opts.homing||0,bounce:opts.bounce||0,pierce:opts.pierce||0,spin:opts.spin||0,destroyBullets:!!opts.destroyBullets});
 }
 function fusion(){const key=L.pairKey(player.gear[0],player.gear[1]);return key?cfg.recipes.get(key)||{name:'合成魔法',status:'design_only'}:null;}
 function cast(slot){
@@ -108,16 +114,17 @@ function cast(slot){
   const p=player,a=p.angle,el=p.gear[slot];
   if(slot===2){
     const fx=fusion();if(!fx)return;
+    const power=M.fusionBoost(p);
     const fusionSprite=fx.asset||'assets/projectiles/fusion_fire_water.svg';
     const combo=[p.gear[0],p.gear[1]],boost=combo.includes('light')?4:0;
     if(combo.includes('dark')){
-      fields.push({x:p.x+Math.cos(a)*90,y:p.y+Math.sin(a)*90,r:55,life:1.8,type:'void',damage:12+boost});
+      fields.push({x:p.x+Math.cos(a)*90,y:p.y+Math.sin(a)*90,r:55,life:1.8,type:'void',damage:(12+boost)*power});
     }else if(combo.includes('wind')){
-      for(let d=-2;d<=2;d++)spawnShot(p.x,p.y,a+d*.16,250,'fusion',27+boost,true,{r:10,pierce:1,spritePath:fusionSprite});
+      for(let d=-2;d<=2;d++)spawnShot(p.x,p.y,a+d*.16,250,'fusion',(27+boost)*power,true,{r:10,pierce:1,spritePath:fusionSprite});
     }else if(combo.includes('earth')){
-      fields.push({x:p.x+Math.cos(a)*90,y:p.y+Math.sin(a)*90,r:46,life:1.7,type:'shield',damage:16+boost});
+      fields.push({x:p.x+Math.cos(a)*90,y:p.y+Math.sin(a)*90,r:46,life:1.7,type:'shield',damage:(16+boost)*power});
     }else{
-      for(let d=-1;d<=1;d++)spawnShot(p.x,p.y,a+d*.19,240,'fusion',29+boost,true,{r:11,pierce:1,spritePath:fusionSprite});
+      for(let d=-1;d<=1;d++)spawnShot(p.x,p.y,a+d*.19,240,'fusion',(29+boost)*power,true,{r:11,pierce:1,spritePath:fusionSprite});
     }
     if(combo.includes('light'))p.hp=Math.min(p.maxHp,p.hp+5);
     cooldowns[2]=fx.cooldownSeconds||5.5;return;
@@ -132,14 +139,17 @@ function cast(slot){
   if(el==='light'){damage=12;speed=475;opts.pierce=3;cd=.34}
   if(el==='dark'){damage=13;speed=140;opts.r=12;opts.destroyBullets=true;cd=.55}
   if(el==='wind'){
-    for(const d of [-.27,0,.27])spawnShot(p.x,p.y,a+d,265,el,9,true,{r:5});
+    for(const d of ((p.mastery[el]||0)>=25?[-.36,-.18,0,.18,.36]:[-.27,0,.27]))spawnShot(p.x,p.y,a+d,265,el,9,true,{r:5});
     cd=.39;
   }else spawnShot(p.x,p.y,a,speed,el,damage,true,opts);
+  player.mastery[el]=(player.mastery[el]||0)+1;
+  if(player.mutations.includes('rapid'))cd*=.77;
   cooldowns[slot]=cd;
 }
 function beginCharge(m,seconds=.65){m.state='windup';m.stateTime=seconds;m.lockAngle=Math.atan2(player.y-m.y,player.x-m.x);m.attackFx=seconds;}
 function circular(m,n,speed=120,kind='enemy_orb',shift=0){for(let i=0;i<n;i++)spawnShot(m.x,m.y,i*TWO/n+shift,speed,kind,9,false)}
 function enemyShoot(m){
+  activeShooter=m.id;
   const a=Math.atan2(player.y-m.y,player.x-m.x);
   if(m.isBoss){
     if(m.kind==='lava_titan'){circular(m,m.hp<m.maxHp*.5?18:12,115,'fire',elapsed*.12);fields.push({x:rand(area.l+45,area.r-45),y:rand(area.t+75,area.b-75),r:23,life:2.1,type:'lava',damage:9});m.cool=m.hp<m.maxHp*.5?1:1.6;}
@@ -194,6 +204,8 @@ function updateMob(m,dt){
 function damageMob(m,dmg,element,shotAngle){
   if(m.immune>0)return;
   m.hp-=dmg;m.hitFx=.15;
+  if(['water','lightning','ice','fire'].includes(element)&&(element!=='water'||fields.filter(f=>f.type==='wet').length<8))
+    M.terrainReact(fields,element,m.x,m.y);
   if(element==='fire')m.burn=Math.max(m.burn,3);
   if(element==='ice'){m.slow=1.8;m.freezeHits++;if(m.freezeHits>=3){m.freeze=.8;m.freezeHits=0;}}
   if(element==='water'){m.x=clamp(m.x+Math.cos(shotAngle)*15,area.l+m.r,area.r-m.r);m.y=clamp(m.y+Math.sin(shotAngle)*15,area.t+m.r,area.b-m.r)}

@@ -17,5 +17,6 @@ jobs:
         run: python tools/validate.py
       - name: Check JavaScript syntax and content
         run: |
+          node --check prototype/logic.js
           node --check prototype/game.js
           node tools/smoke_test.js

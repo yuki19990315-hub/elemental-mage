@@ -1,0 +1,1354 @@
+{
+  "version": "environment-v2.0",
+  "source_type": "concept_board_crops",
+  "themes": [
+    "cursed_stone",
+    "ice_sanctum",
+    "lava_temple",
+    "abyss_shrine",
+    "holy_ruins"
+  ],
+  "units": "px",
+  "assets": [
+    {
+      "kind": "floor",
+      "theme": "cursed_stone",
+      "variant": 0,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/cursed_stone/floor_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "06f20c0c08125c2a4e6091d0f6b9163ec174dc69dc06aa96c249494c94f6f073"
+    },
+    {
+      "kind": "floor",
+      "theme": "cursed_stone",
+      "variant": 1,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/cursed_stone/floor_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "d6d3f50361c4ed644ec3319c28a3eecb4ba911487b72730eb2b692dbfe00e19f"
+    },
+    {
+      "kind": "floor",
+      "theme": "cursed_stone",
+      "variant": 2,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/cursed_stone/floor_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "59a6d7ff0355c73e5ba2636ebef3360d792e3f116c379145613ee25741eefaf5"
+    },
+    {
+      "kind": "floor",
+      "theme": "cursed_stone",
+      "variant": 3,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/cursed_stone/floor_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "4369e4abefb77d72c40add596f492e048e584f4d099da6f44c935ee82312071e"
+    },
+    {
+      "kind": "wall",
+      "theme": "cursed_stone",
+      "variant": 0,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/cursed_stone/wall_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "791e3a3b2ae287ec73b24f2a61cdc0d4f4287ec877e115c21ee3df640c917fea"
+    },
+    {
+      "kind": "wall",
+      "theme": "cursed_stone",
+      "variant": 1,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/cursed_stone/wall_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "51aadb57ab210f96d8bf084c6e15882ef28889a81f5914e686de129678ab2564"
+    },
+    {
+      "kind": "wall",
+      "theme": "cursed_stone",
+      "variant": 2,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/cursed_stone/wall_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "9d7246f439dc585f9793ae79232d02d27b56e5a2a5c353ffc05bbbe27f0256d7"
+    },
+    {
+      "kind": "wall",
+      "theme": "cursed_stone",
+      "variant": 3,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/cursed_stone/wall_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "d3171de99ad942707bf26c510a441b33903d83077f2fcc309e0130a2e82a7f91"
+    },
+    {
+      "kind": "floor",
+      "theme": "ice_sanctum",
+      "variant": 0,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/ice_sanctum/floor_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "41f5be1528cad1c93bb4e612461da0b0254a5fb9d6e062cf94db0900a7694b9e"
+    },
+    {
+      "kind": "floor",
+      "theme": "ice_sanctum",
+      "variant": 1,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/ice_sanctum/floor_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "2b8fac88dcbadccfee0e4e23bcf521159c094b894686ea091637a2f15c2f951f"
+    },
+    {
+      "kind": "floor",
+      "theme": "ice_sanctum",
+      "variant": 2,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/ice_sanctum/floor_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "03fa8e9f7466b4e1e4b352f44adca76bf84f733e695313b21f566e96f11b2bfd"
+    },
+    {
+      "kind": "floor",
+      "theme": "ice_sanctum",
+      "variant": 3,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/ice_sanctum/floor_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "6da8cb6fdfe334d1b3fbf0045ede5b14a6b99bea128f7668846978143990987a"
+    },
+    {
+      "kind": "wall",
+      "theme": "ice_sanctum",
+      "variant": 0,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/ice_sanctum/wall_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "1ec714e50ac7f846f6bf339f90faf14da6d8481708d02582bfda05b364e3cec5"
+    },
+    {
+      "kind": "wall",
+      "theme": "ice_sanctum",
+      "variant": 1,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/ice_sanctum/wall_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "3ed04f5d73e275cccb06efb568db7e9783dccc77dc0dd5b1625ef153bf9a048e"
+    },
+    {
+      "kind": "wall",
+      "theme": "ice_sanctum",
+      "variant": 2,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/ice_sanctum/wall_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "0f1a911ee865f7c0e1372f18151faf8797e5c0447064ed117591107bbe6a467b"
+    },
+    {
+      "kind": "wall",
+      "theme": "ice_sanctum",
+      "variant": 3,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/ice_sanctum/wall_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "f687edf0fdc7c32659862ae5f4ab37c916a61af5923cea0834dbe0a43a19026f"
+    },
+    {
+      "kind": "floor",
+      "theme": "lava_temple",
+      "variant": 0,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/lava_temple/floor_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "4873751dfde720d8f38b55acc93ef0189843328ae55850736b3f1679e390d0f7"
+    },
+    {
+      "kind": "floor",
+      "theme": "lava_temple",
+      "variant": 1,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/lava_temple/floor_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "8400099d2114005df3abfd1fcd150defbf70a2250b86e33af08420363ac36d6f"
+    },
+    {
+      "kind": "floor",
+      "theme": "lava_temple",
+      "variant": 2,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/lava_temple/floor_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "724ed25ed3e9c82be5cd2fbab98e4778a8254e4483d9eaebf2d4d4ddf9ec8e5b"
+    },
+    {
+      "kind": "floor",
+      "theme": "lava_temple",
+      "variant": 3,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/lava_temple/floor_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "749b5a5a7427f28e60114c9790cfcb2aeb4b1e9344b0ea57b2add66475cab9ea"
+    },
+    {
+      "kind": "wall",
+      "theme": "lava_temple",
+      "variant": 0,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/lava_temple/wall_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "a97cd694191f0cb597b873e05e73f2328d0557dfa72848ecf758b57eab3d1d35"
+    },
+    {
+      "kind": "wall",
+      "theme": "lava_temple",
+      "variant": 1,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/lava_temple/wall_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "f9b9477808e5bea98d11dc01c1b03e98127e721f4172e2c8b050999cbe8cb274"
+    },
+    {
+      "kind": "wall",
+      "theme": "lava_temple",
+      "variant": 2,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/lava_temple/wall_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "f2666e6fca4853b9f5bffdb899f7a17083c98a4704ffbb8e916310f02ebac476"
+    },
+    {
+      "kind": "wall",
+      "theme": "lava_temple",
+      "variant": 3,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/lava_temple/wall_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "3f8eb3db2985daee69e75fa5fd764afc0b4f230280489061d43a21f9baffdeb9"
+    },
+    {
+      "kind": "floor",
+      "theme": "abyss_shrine",
+      "variant": 0,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/abyss_shrine/floor_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "eab22a2c5e9b38f5adc4690e0ddaac3da8daafe87d21997ed9aba54f7290bf07"
+    },
+    {
+      "kind": "floor",
+      "theme": "abyss_shrine",
+      "variant": 1,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/abyss_shrine/floor_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "6453fd79c92563551749f20bc2aa006d58ee20de84daef49ca3145e07d340737"
+    },
+    {
+      "kind": "floor",
+      "theme": "abyss_shrine",
+      "variant": 2,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/abyss_shrine/floor_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "35dee032a85133a30f1d9070292ce1f8b0b71ffcb6e13c1275b2798bc9160cc2"
+    },
+    {
+      "kind": "floor",
+      "theme": "abyss_shrine",
+      "variant": 3,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/abyss_shrine/floor_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "57834520eb0b1e77e7f29fadc05194acbc05b5bfeed777e2ef70661f494fa383"
+    },
+    {
+      "kind": "wall",
+      "theme": "abyss_shrine",
+      "variant": 0,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/abyss_shrine/wall_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "433560cf3b2ec219451138a57cd42d9107d54f71affc9af6d8dc4ca552ee44bd"
+    },
+    {
+      "kind": "wall",
+      "theme": "abyss_shrine",
+      "variant": 1,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/abyss_shrine/wall_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "f750d23e627a987db70cc02e4365def53c8efaa223b803108732ab44d0204411"
+    },
+    {
+      "kind": "wall",
+      "theme": "abyss_shrine",
+      "variant": 2,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/abyss_shrine/wall_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "e511b90570338441ba9471da186c6b9ec7cd61b6d397a33a17b6fb3c2897bdcf"
+    },
+    {
+      "kind": "wall",
+      "theme": "abyss_shrine",
+      "variant": 3,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/abyss_shrine/wall_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "0849d4e4332298b3e0b47be15948606b3adb9da469e9641cea85396ad169861f"
+    },
+    {
+      "kind": "floor",
+      "theme": "holy_ruins",
+      "variant": 0,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/holy_ruins/floor_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "02cd6d60d35f158f4178164c7d01a10cb9892acfa0924a02cfd2606df39f6734"
+    },
+    {
+      "kind": "floor",
+      "theme": "holy_ruins",
+      "variant": 1,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/holy_ruins/floor_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "d6d32ac0f6a76eda0f3738e15279b157b9fef50c2c5fe4f8e0464d142e1e3f94"
+    },
+    {
+      "kind": "floor",
+      "theme": "holy_ruins",
+      "variant": 2,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/holy_ruins/floor_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "b7426033c6cc27f0410196fb43e0d66ecce107eed727e1cd78317409356afc41"
+    },
+    {
+      "kind": "floor",
+      "theme": "holy_ruins",
+      "variant": 3,
+      "blocks_movement": false,
+      "blocks_projectiles": false,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_requires_seam_review",
+      "path": "assets/environment/v2/tiles/holy_ruins/floor_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "9ea00ac128a020e0adabbbaa404879eb064317eac82461959feff7ac1f672052"
+    },
+    {
+      "kind": "wall",
+      "theme": "holy_ruins",
+      "variant": 0,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/holy_ruins/wall_0.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "f613bb4aaf678cc6514a97550b118982962a67095778c805bef667aad8e2c15a"
+    },
+    {
+      "kind": "wall",
+      "theme": "holy_ruins",
+      "variant": 1,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/holy_ruins/wall_1.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "cd83ed32486de9af73f44e0eb22d7b83d4526ef53275fa210f69d44510611478"
+    },
+    {
+      "kind": "wall",
+      "theme": "holy_ruins",
+      "variant": 2,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/holy_ruins/wall_2.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "9fbd52c10d3f2655ed66af0c220ef924c78bd4ca0ef1d9d1c4d5ca57b38565b4"
+    },
+    {
+      "kind": "wall",
+      "theme": "holy_ruins",
+      "variant": 3,
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "pivot": [
+        0,
+        0
+      ],
+      "grid_px": 64,
+      "quality": "concept_crop_modular_edge_not_seamless",
+      "path": "assets/environment/v2/tiles/holy_ruins/wall_3.png",
+      "size_px": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "sha256": "94fe155976222f1f3a85e8c865fed21da9f325b94c63f720603b28c9b7efb516"
+    },
+    {
+      "id": "cursed_crate",
+      "kind": "obstacle",
+      "category": "crate",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 21
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/cursed_crate.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "dc97be8a3be2d011393035b1400f0bdef64d2ad125b4c6f866675a20ab889655"
+    },
+    {
+      "id": "rune_crate",
+      "kind": "obstacle",
+      "category": "crate",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 22
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/rune_crate.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "98aff8a4eea698d09f1be975d304e1e6b9e8056eb6a13b38ad3bd8360d1bea75"
+    },
+    {
+      "id": "iron_barrel",
+      "kind": "obstacle",
+      "category": "barrel",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 19
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/iron_barrel.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "fae8c6710e530fbad37364f9eef6580a6e695c285b93722303c79e8b66b73b81"
+    },
+    {
+      "id": "chained_barrel",
+      "kind": "obstacle",
+      "category": "barrel",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 19
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/chained_barrel.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "6258db06b452d2840a1a50c32caba763654559a67936036bfdc3fb4ce1f2bbe3"
+    },
+    {
+      "id": "broken_pillar",
+      "kind": "obstacle",
+      "category": "pillar",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 21
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/broken_pillar.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "e18753b2ff6efe9dae8613202f35765da3520482225dce7b0dc4d3e553055767"
+    },
+    {
+      "id": "rune_pillar",
+      "kind": "obstacle",
+      "category": "pillar",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 22
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/rune_pillar.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "49458028e436f223ee0137cd68987330009d8520000e42e2888e3bb19e555999"
+    },
+    {
+      "id": "arcane_brazier",
+      "kind": "obstacle",
+      "category": "brazier",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": false,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 16
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/arcane_brazier.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "dff28ef86bf77f5e692056934f7103e04be8082ce3315305465c1328fbe6988c"
+    },
+    {
+      "id": "violet_brazier",
+      "kind": "obstacle",
+      "category": "brazier",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": false,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 16
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/violet_brazier.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "971018288cec6ef697fb6de85dff5092e3089143c8dd700ef6cd6742387c8e7d"
+    },
+    {
+      "id": "azure_crystal_cluster",
+      "kind": "obstacle",
+      "category": "crystal",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 23
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/azure_crystal_cluster.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "85df0a12a39ba3423242a560103bb942807385f0daf1a60d68d512fd9ac52a5e"
+    },
+    {
+      "id": "amethyst_crystal_cluster",
+      "kind": "obstacle",
+      "category": "crystal",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 23
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/amethyst_crystal_cluster.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "3ec9853f162050039a7e9b489629be6d668caef135df3f29ba7a1bf5bc3b8737"
+    },
+    {
+      "id": "rune_boulder",
+      "kind": "obstacle",
+      "category": "boulder",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 23
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/rune_boulder.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "920c85f25af19b9ab20081c69172ed8a375829dc8d5c090b2783b5f8cd504ab2"
+    },
+    {
+      "id": "rune_core_boulder",
+      "kind": "obstacle",
+      "category": "boulder",
+      "theme": "universal",
+      "blocks_movement": true,
+      "blocks_projectiles": true,
+      "collision": {
+        "shape": "circle",
+        "radius_at_display_px": 23
+      },
+      "pivot": [
+        64,
+        104
+      ],
+      "display_px": 64,
+      "quality": "grabcut_approx_manual_review",
+      "path": "assets/environment/v2/props/rune_core_boulder.png",
+      "size_px": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "sha256": "5da43bc0caf0e5f6d09473147929d0c9641329574149cdc566686fcb8402a963"
+    },
+    {
+      "kind": "atlas",
+      "grid": [
+        6,
+        2
+      ],
+      "entry_ids": [
+        "cursed_crate",
+        "rune_crate",
+        "iron_barrel",
+        "chained_barrel",
+        "broken_pillar",
+        "rune_pillar",
+        "arcane_brazier",
+        "violet_brazier",
+        "azure_crystal_cluster",
+        "amethyst_crystal_cluster",
+        "rune_boulder",
+        "rune_core_boulder"
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/props_atlas.png",
+      "size_px": [
+        768,
+        256
+      ],
+      "alpha": true,
+      "sha256": "2853584acfaed482cbf7329252b05c2234c7bf153acb5f40ffff02616f44870b"
+    },
+    {
+      "kind": "atlas",
+      "theme": "cursed_stone",
+      "tile_kind": "floor",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/cursed_stone/floor_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "8014548dba57f8554463b38748c1663bf4e9ae790f7bd2fd50d7257f6eea3d96"
+    },
+    {
+      "kind": "atlas",
+      "theme": "cursed_stone",
+      "tile_kind": "wall",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/cursed_stone/wall_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "2e6b987da39d8126df37923389d3a59039ffb586408ba5dbd77e128dcdfaef53"
+    },
+    {
+      "kind": "atlas",
+      "theme": "ice_sanctum",
+      "tile_kind": "floor",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/ice_sanctum/floor_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "a315506f5df63193bd7a41a054c1aeadf2739235f71dc3407edd6fc1d74cff0a"
+    },
+    {
+      "kind": "atlas",
+      "theme": "ice_sanctum",
+      "tile_kind": "wall",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/ice_sanctum/wall_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "081d9e9587246fa9beafe8883a045ab6766261e5f6feba40df21e9032d28d043"
+    },
+    {
+      "kind": "atlas",
+      "theme": "lava_temple",
+      "tile_kind": "floor",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/lava_temple/floor_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "d858bfbcf337a5cf585faf32882d489f0b10a66b2856a93c89d97d4c3a0eb7bc"
+    },
+    {
+      "kind": "atlas",
+      "theme": "lava_temple",
+      "tile_kind": "wall",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/lava_temple/wall_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "3e76df85a0bce86a8fb2694e09febaad5e33191edb1d05b01fc05177066ebdf9"
+    },
+    {
+      "kind": "atlas",
+      "theme": "abyss_shrine",
+      "tile_kind": "floor",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/abyss_shrine/floor_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "802598f9610baf0a7cd10aa4abce65593c6067cc8a9ae6197aece0fc7fd19459"
+    },
+    {
+      "kind": "atlas",
+      "theme": "abyss_shrine",
+      "tile_kind": "wall",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/abyss_shrine/wall_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "2912019ebb24505b740353c0a4c1ea90ae8f0107a0d077f00743be2cd1a40ed7"
+    },
+    {
+      "kind": "atlas",
+      "theme": "holy_ruins",
+      "tile_kind": "floor",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/holy_ruins/floor_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "bf19b0c70dd047720611bfb9eada8f8102adc1bb45a20615b97992b7cdf782cf"
+    },
+    {
+      "kind": "atlas",
+      "theme": "holy_ruins",
+      "tile_kind": "wall",
+      "grid": [
+        4,
+        1
+      ],
+      "tile_size": [
+        64,
+        64
+      ],
+      "quality": "preview",
+      "path": "assets/environment/v2/tiles/holy_ruins/wall_atlas.png",
+      "size_px": [
+        256,
+        64
+      ],
+      "alpha": true,
+      "sha256": "e44e698986cd8455ef537153c00876c031dad7b4797b54ffc14be6ff48d66399"
+    }
+  ],
+  "warning": "Image crops from illustrated concepts: floor seams and wall modularity are unverified. Props use GrabCut alpha mattes and require manual review before shipping."
+}

@@ -82,7 +82,7 @@ function damagePlayer(dmg,knockAngle=null){if(player.inv>0||mode!=='battle')retu
 }
 function spawnShot(x,y,angle,speed,element,damage,friendly,opts={}){
   if(shots.length>=320)return;
-  shots.push({x,y,angle,speed,element,damage,friendly,r:opts.r||5,life:opts.life||3,hitIds:new Set(),homing:opts.homing||0,bounce:opts.bounce||0,pierce:opts.pierce||0,spin:opts.spin||0,destroyBullets:!!opts.destroyBullets});
+  shots.push({x,y,angle,speed,element,damage,friendly,spritePath:opts.spritePath||((friendly&&element==='fusion')?'assets/projectiles/fusion_fire_water.svg':(friendly?'assets/projectiles/'+element+'_0.svg':'assets/projectiles/'+(element==='enemy_orb'?'enemy_orb_0':element+'_0')+'.svg')),r:opts.r||5,life:opts.life||3,hitIds:new Set(),homing:opts.homing||0,bounce:opts.bounce||0,pierce:opts.pierce||0,spin:opts.spin||0,destroyBullets:!!opts.destroyBullets});
 }
 function fusion(){const key=L.pairKey(player.gear[0],player.gear[1]);return key?cfg.recipes.get(key)||{name:'合成魔法',status:'design_only'}:null;}
 function cast(slot){
@@ -90,15 +90,16 @@ function cast(slot){
   const p=player,a=p.angle,el=p.gear[slot];
   if(slot===2){
     const fx=fusion();if(!fx)return;
+    const fusionSprite=fx.asset||'assets/projectiles/fusion_fire_water.svg';
     const combo=[p.gear[0],p.gear[1]],boost=combo.includes('light')?4:0;
     if(combo.includes('dark')){
       fields.push({x:p.x+Math.cos(a)*90,y:p.y+Math.sin(a)*90,r:55,life:1.8,type:'void',damage:12+boost});
     }else if(combo.includes('wind')){
-      for(let d=-2;d<=2;d++)spawnShot(p.x,p.y,a+d*.16,250,'fusion',27+boost,true,{r:10,pierce:1});
+      for(let d=-2;d<=2;d++)spawnShot(p.x,p.y,a+d*.16,250,'fusion',27+boost,true,{r:10,pierce:1,spritePath:fusionSprite});
     }else if(combo.includes('earth')){
       fields.push({x:p.x+Math.cos(a)*90,y:p.y+Math.sin(a)*90,r:46,life:1.7,type:'shield',damage:16+boost});
     }else{
-      for(let d=-1;d<=1;d++)spawnShot(p.x,p.y,a+d*.19,240,'fusion',29+boost,true,{r:11,pierce:1});
+      for(let d=-1;d<=1;d++)spawnShot(p.x,p.y,a+d*.19,240,'fusion',29+boost,true,{r:11,pierce:1,spritePath:fusionSprite});
     }
     if(combo.includes('light'))p.hp=Math.min(p.maxHp,p.hp+5);
     cooldowns[2]=fx.cooldownSeconds||5.5;return;
@@ -254,7 +255,8 @@ function drawWorld(){
     disk(f.x,f.y,f.r,f.type==='lava'?'#f6533d66':f.type==='shield'?'#79dfe857':'#a65eff55');}
   for(const p of pickups){disk(p.x,p.y,13,color(p.element)+'88','#ffffff');drawElementIcon(p.element,p.x-9,p.y-9,18)}
   for(const m of enemies)drawMob(m);
-  for(const b of shots){const hue=b.friendly?color(b.element==='fusion'?player.gear[0]:b.element):color(b.element);disk(b.x,b.y,b.r,hue,b.friendly?'#ffffff':'#751d38');}
+  for(const b of shots){const hue=b.friendly?color(b.element==='fusion'?player.gear[0]:b.element):color(b.element);disk(b.x,b.y,b.r,hue,b.friendly?'#ffffff':'#751d38');
+    sprite('../'+b.spritePath,b.x-(b.friendly?12:9),b.y-(b.friendly?12:9),b.friendly?24:18,b.friendly?24:18);}
   const angle=player.angle,dir=Math.abs(Math.cos(angle))>Math.abs(Math.sin(angle))?(Math.cos(angle)>0?'right':'left'):(Math.sin(angle)>0?'down':'up');
   if(player.inv===0||Math.floor(frameTick*13)%2===0)oldSVG('characters/mage_'+dir+'_'+(Math.floor(frameTick*7)%2),player.x-17,player.y-17,34,34);
 }

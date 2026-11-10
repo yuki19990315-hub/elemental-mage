@@ -20,3 +20,4 @@ jobs:
           node --check prototype/logic.js
           node --check prototype/game.js
           node tools/smoke_test.js
+          node tools/test_runtime_vm.js

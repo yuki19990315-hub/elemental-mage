@@ -6,7 +6,7 @@ const context2d={beginPath:fn,arc:fn,fill:fn,stroke:fn,fillRect:fn,fillText:fn,d
 const canvas={getContext:()=>context2d,addEventListener:fn,getBoundingClientRect:()=>({left:0,top:0,width:360,height:640}),setPointerCapture:fn};
 const s={document:{querySelector:()=>canvas},window:{addEventListener:fn},Image:function(){this.complete=false;this.naturalWidth=0;},performance:{now:()=>1000},requestAnimationFrame:fn,fetch:()=>Promise.reject(new Error('network disabled for test')),console:{warn:fn,log:fn},Math,Set,Map};
 s.globalThis=s;vm.createContext(s);
-for(const file of ['prototype/logic.js','prototype/game.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),s,{filename:file});
+for(const file of ['prototype/logic.js','prototype/mechanics_v4.js','prototype/game.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),s,{filename:file});
 function run(code){return vm.runInContext(code,s)}
 run('start()');
 assert.equal(run('mode'),'altar');

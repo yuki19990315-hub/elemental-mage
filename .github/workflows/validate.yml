@@ -18,6 +18,8 @@ jobs:
       - name: Check JavaScript syntax and content
         run: |
           node --check prototype/logic.js
+          node --check prototype/mechanics_v4.js
           node --check prototype/game.js
           node tools/smoke_test.js
+          node tools/test_mechanics_v4.js
           node tools/test_runtime_vm.js

@@ -93,7 +93,7 @@ function resetRoom(isBoss){
 }
 function advance(){
   if(boss){stage++;room=1;player.hp=Math.min(player.maxHp,player.hp+25);mode='route';}
-  else if(room===1){mode='mutation';mutationOptions=M.randomMutations(player.mutations);}
+  else if(room===1){mutationOptions=M.randomMutations(player.mutations);if(mutationOptions.length)mode='mutation';else{room++;resetRoom(false);}}
   else if(room===2&&stage>1){mode='curse';}
   else if(room>=3){mode='preboss';rewardOptions=randomElements(2);}
   else{room++;resetRoom(false);}
@@ -347,6 +347,29 @@ function overlay(){if(mode==='battle')return;
  ctx.fillStyle='#0b091bda';ctx.fillRect(32,96,296,402);
  if(mode==='clear'){labelText(boss?'ボス撃破！':'部屋クリア！',180,249,27,'#f4d17d','center');labelText('タップして次へ',180,304,16,'#f4eaff','center');}
  if(mode==='dead'){labelText('GAME OVER',180,247,27,'#ff8392','center');labelText('タップして再挑戦',180,301,16,'#f4eaff','center');}
+ if(mode==='mutation'){
+   labelText('魔法の突然変異',180,153,23,'#f1d78b','center');
+   labelText('強化を1つ選択',180,185,14,'#dad1ed','center');
+   for(let i=0;i<mutationOptions.length;i++){
+     const m=mutationOptions[i],x=23+i*109;
+     ctx.fillStyle='#45315f';ctx.fillRect(x,226,99,158);
+     labelText(m.name,x+49,267,13,'#ffdb83','center');
+     for(let k=0;k<3;k++)labelText(m.desc.slice(k*7,(k+1)*7),x+49,308+k*20,11,'#f9e9ff','center');
+   }
+ }
+ if(mode==='route'){
+   labelText('進む道を選択',180,159,22,'#f4d17d','center');
+   labelText('安全：回復 / 危険：敵が増える',180,194,13,'#f3e6ef','center');
+   for(let i=0;i<2;i++){const x=i?193:47;ctx.fillStyle=i?'#57364b':'#33565d';ctx.fillRect(x,233,120,155);
+     labelText(i?'試練の道':'安息の道',x+60,287,16,'#f8e7cc','center');
+     labelText(i?'敵＋2体':'HP回復',x+60,332,13,'#f8e8ff','center');}
+ }
+ if(mode==='curse'){
+   labelText('呪われた祭壇',180,153,22,'#ff9cb4','center');
+   labelText('最大HP -20 / 魔法威力 +30%',180,196,13,'#f2ddf0','center');
+   for(let i=0;i<2;i++){const x=i?193:47;ctx.fillStyle=i?'#36504f':'#60304f';ctx.fillRect(x,238,120,142);
+     labelText(i?'拒否':'契約する',x+60,294,16,'#f8e5ed','center');}
+ }
  if(mode==='altar'||mode==='preboss'){
   const altar=mode==='altar';labelText(altar?'始祖小祠の祭壇':'ボス直前の報酬',180,153,22,'#f4d17d','center');
   labelText(altar?'最初の属性を1つ選ぶ':'2つのうち1つを選択',180,188,15,'#d5cee8','center');
@@ -363,6 +386,17 @@ function drawScene(){drawWorld();drawHud();overlay()}
 function tapOverlay(x,y){if(mode==='battle')return false;
  if(mode==='dead'){start();return true;}
  if(mode==='clear'){advance();return true;}
+ if(mode==='mutation'){if(y>=220&&y<=395){
+   const chosen=mutationOptions[Math.min(2,Math.floor(Math.max(0,x-23)/109))];
+   if(chosen)M.applyMutation(player,chosen.id);
+   mutationOptions=[];room++;resetRoom(false);
+ }return true;}
+ if(mode==='route'){if(y>=225&&y<=400){
+   routeChoice=x<180?'safe':'danger';if(routeChoice==='safe')player.hp=Math.min(player.maxHp,player.hp+12);resetRoom(false);
+ }return true;}
+ if(mode==='curse'){if(y>=230&&y<=400){
+   M.curse(player,x<180);room++;resetRoom(false);
+ }return true;}
  if((mode==='altar'||mode==='preboss')&&y>=225&&y<=397){
    const sourceMode=mode;selected=rewardOptions[x<180?0:1];if(sourceMode==='altar'){player.gear[0]=selected;selected=null;resetRoom(false)}else{swapFromPreboss=true;mode='swap';}return true;
  }

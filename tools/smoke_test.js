@@ -8,7 +8,7 @@ assert.equal(recipes.length,28);
 assert.equal(new Set(recipes.map(x=>[...x.elements].sort().join('|'))).size,28);
 assert.equal(enemies.length,11);
 assert.equal(bosses.length,3);
-for(const p of ['prototype/index.html','prototype/logic.js','prototype/game.js','prototype/style.css','assets/previews/mobile_mockup.svg'])assert(fs.existsSync(path.join(root,p)),p);
+for(const p of ['prototype/index.html','prototype/logic.js','prototype/mechanics_v4.js','prototype/game.js','prototype/style.css','assets/previews/mobile_mockup.svg'])assert(fs.existsSync(path.join(root,p)),p);
 const L=require('../prototype/logic.js');
 assert.equal(L.pairKey('fire','water'),'fire|water');
 assert.equal(L.pairKey('water','fire'),'fire|water');
@@ -22,3 +22,5 @@ assert.ok(L.steerAngle(0,Math.PI,0.1)<=0.101);
 const game=fs.readFileSync(path.join(root,'prototype/game.js'),'utf8');
 for(const feature of ['poison_slime','crystal_golem','abyss_eye','sorcerer_light','phantom_dark','resetRoom(true)','dashHitsObstacle','../data/','preboss','boss_ice_queen']) assert(game.includes(feature),'missing '+feature);
 console.log('PASS: 9 element states, 28 fusion recipes, 11 enemies, 3 bosses, prototype mechanics');
+// V4 extensions are explicitly loaded, not merely present in the repository.
+for(const feature of ['M.randomMutations','M.terrainReact','M.absorb','ENV_THEMES','mode=\'route\'','mode=\'curse\''])assert(game.includes(feature),'missing v4 feature '+feature);

@@ -1,0 +1,68 @@
+{
+  "id": "boss_ice_queen",
+  "status": "candidate_requires_visual_review",
+  "canvas_size": [
+    256,
+    256
+  ],
+  "anchor_px": [
+    128,
+    220
+  ],
+  "atlas": {
+    "file": "atlas.png",
+    "columns": 4,
+    "rows": 2,
+    "order": [
+      "idle_0",
+      "idle_1",
+      "move_0",
+      "move_1",
+      "attack_0",
+      "attack_1",
+      "hit",
+      "stun"
+    ]
+  },
+  "animations": {
+    "idle": {
+      "frames": [
+        "idle_0.png",
+        "idle_1.png"
+      ],
+      "fps": 3,
+      "loop": true
+    },
+    "move": {
+      "frames": [
+        "move_0.png",
+        "move_1.png"
+      ],
+      "fps": 6,
+      "loop": true
+    },
+    "attack": {
+      "frames": [
+        "attack_0.png",
+        "attack_1.png"
+      ],
+      "fps": 8,
+      "loop": false
+    },
+    "hit": {
+      "frames": [
+        "hit.png"
+      ],
+      "fps": 1,
+      "loop": false
+    },
+    "stun": {
+      "frames": [
+        "stun.png"
+      ],
+      "fps": 1,
+      "loop": false
+    }
+  },
+  "note": "Animation timing and anchor are provisional; effects may spill into other frames."
+}

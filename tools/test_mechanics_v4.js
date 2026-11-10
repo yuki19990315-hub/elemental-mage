@@ -1,0 +1,17 @@
+'use strict';
+const assert=require('node:assert/strict');
+const M=require('../prototype/mechanics_v4.js');
+let player={hp:70,maxHp:100,mana:0,cursedPower:0,mutations:[],familiar:false,mastery:{fire:30}};
+assert.equal(M.randomMutations([],()=>.2).length,3);
+assert.ok(M.applyMutation(player,'recovery'));assert.equal(player.maxHp,125);
+assert.ok(!M.applyMutation(player,'recovery'));
+M.absorb(player,9);assert.equal(player.mana,45);
+assert.equal(M.fusionBoost(player),1.65);assert.equal(player.mana,5);
+assert.ok(M.damageMultiplier(player,'fire')>1);
+let fields=[];M.terrainReact(fields,'water',30,40);assert.equal(fields[0].type,'wet');
+assert.equal(M.terrainReact(fields,'lightning',34,42),'electrified');
+fields=[];M.terrainReact(fields,'water',20,20);M.terrainReact(fields,'ice',20,20);assert.equal(fields[0].type,'frozen');
+const mob={hp:200,cool:1},part={hp:9};
+assert.ok(M.breakPart(mob,part,10));assert.equal(mob.hp,175);assert.equal(M.friendlyFireDamage(10),6);
+M.curse(player,true);assert.equal(player.maxHp,105);assert.equal(player.cursedPower,.3);
+console.log('PASS: absorption, terrain reaction, mutation, boss break, curse and friendly fire');

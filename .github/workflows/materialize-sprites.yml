@@ -1,0 +1,47 @@
+name: Publish candidate sprite PNGs
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/materialize-sprites.yml'
+      - 'tools/materialize_sprite_packets.py'
+      - 'assets/sprites/v2/packets/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow
+      - name: Decode sprites and generate atlases
+        run: python tools/materialize_sprite_packets.py
+      - name: Validate data, source packets and PNGs
+        run: |
+          python tools/validate.py
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          packets=list(Path("assets/sprites/v2/packets").glob("*.json"))
+          generated=list(Path("assets/sprites/v2").rglob("idle_0.png"))
+          assert len(generated)==len(packets),(len(generated),len(packets))
+          for path in generated:
+              with Image.open(path) as image:
+                  image.verify()
+          print(f"PASS: {len(generated)} valid sprite sets")
+          PY
+      - name: Commit generated image files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/sprites/v2/enemies assets/sprites/v2/bosses
+          if ! git diff --cached --quiet; then
+            git commit -m "art: materialize candidate PNG sprite packets [skip ci]"
+            git push
+          fi

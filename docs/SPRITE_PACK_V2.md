@@ -47,3 +47,17 @@ python tools/split_sprite_sheet_v2.py --source-dir path/to/sheets --output-dir a
 - 見た目から当たり判定を自動決定しないでください。衝突形状はゲーム側で別に定義してください。
 
 **登録状態について:** この文章と変換スクリプトはGitHub管理対象です。PNG本体はリポジトリに実際に存在することを確認するまで「登録済み」と扱いません。
+
+
+## GitHubリポジトリ内のPNG復元（追加）
+
+`assets/sprites/v2/packets/*.json` はPNGバイナリのbase64を持つ復元用ソースです。2026-11-10時点で**12体分のパケットのみ**あり、`boss_ice_queen` と `boss_abyss_eye` の2体分は未登録です。完全版14体分の元PNGは会話で配布したZIPにあります。
+
+```bash
+python -m pip install Pillow
+python tools/materialize_sprite_packets.py
+```
+
+12体について8フレームとアトラス、仮のアンカー/タイミング付き `meta.json` を生成します。GitHub Actions `materialize-sprites.yml` でも同じ処理を行い、生成PNGの登録を試みます。必ずGitHubのブランチで画像が存在するか確認してください。
+
+**注意:** 分割画像のフレーム内容、透明ノイズ、当たり判定、FPSは本実装前に目視で確定する必要があります。

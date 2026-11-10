@@ -34,5 +34,5 @@ for p in pdir.glob("*.json"):
     for e in doc["entries"]:
         dest=Path(e["path"])
         assert dest.parts[:3]==("assets","sprites","v2") and ".." not in dest.parts and dest.suffix==".png",p
-        assert base64.b64decode(e["base64"],validate=True).startswith(b"\\x89PNG\\r\\n\\x1a\\n"),e["path"]
+        assert base64.b64decode(e["base64"],validate=True).startswith(bytes([137,80,78,71,13,10,26,10])),e["path"]
 print(f"PASS: {len(elements)} element states, {len(pairs)} pair recipes, {len(enemies)} enemies, {len(bosses)} bosses, {len(list(pdir.glob('*.json')))} sprite packets")

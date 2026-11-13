@@ -1,0 +1,53 @@
+name: Publish playable Elemental Mage web preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pages.yml'
+      - 'web/**'
+      - 'prototype/**'
+      - 'assets/**'
+      - 'tools/rebuild_gba_art.py'
+      - 'tools/smoke_test.js'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "github-pages"
+  cancel-in-progress: true
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and verify GBA game assets
+        run: |
+          python -m pip install 'Pillow>=11.0,<13'
+          python tools/rebuild_gba_art.py --root .
+          python -c 'from tools.rebuild_gba_art import validate; assert validate(".") >= 200'
+          node --check prototype/game.js
+          node tools/smoke_test.js
+      - name: Assemble static web site
+        run: |
+          mkdir -p _site
+          cp -R prototype assets _site/
+          cp -R web/. _site/
+          test -f _site/index.html
+          test -f _site/gallery/index.html
+          test -f _site/prototype/index.html
+          test -f _site/assets/gba/v1/manifest.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

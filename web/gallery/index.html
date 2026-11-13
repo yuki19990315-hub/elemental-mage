@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GBA素材ギャラリー | Elemental Mage</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0e1524;color:#f4f1fa;font-family:system-ui,-apple-system,sans-serif}main{max-width:980px;margin:auto;padding:18px 14px 60px}header{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}a{color:#8fdcf4}h1{font-size:clamp(20px,5vw,30px);margin:10px 0}p{color:#b6c6da;font-size:13px;line-height:1.6}nav{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 24px}button{appearance:none;cursor:pointer;border-radius:20px;color:#d2e4f3;background:#25344e;border:1px solid #455778;padding:10px 13px;font-weight:750}button[aria-pressed=true]{background:#427c9e;color:white;border-color:#92cee6}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(142px,1fr));gap:11px}.card{border:1px solid #384861;border-radius:12px;background:#1a263b;overflow:hidden}.preview{aspect-ratio:1;display:grid;place-items:center;background-color:#2d3850;background-image:linear-gradient(45deg,#253147 25%,transparent 25%),linear-gradient(-45deg,#253147 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#253147 75%),linear-gradient(-45deg,transparent 75%,#253147 75%);background-position:0 0,0 8px,8px -8px,-8px 0;background-size:16px 16px}.preview img{width:min(90%,136px);height:min(90%,136px);object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}.meta{padding:10px 12px}.meta strong{display:block;font-size:13px;overflow-wrap:anywhere}.meta span{display:block;font-size:11px;color:#a8bdd5;margin-top:5px}#status{color:#a4cede}small{font-size:12px;color:#8ca4c0}a:focus-visible,button:focus-visible{outline:2px solid #fcdf95}
+</style></head><body><main>
+<header><div><small>ASSET LIBRARY / GBA-V1</small><h1>モンスター＆背景 ギャラリー</h1></div><a href="../">← ホーム</a></header>
+<p>実際にリポジトリへ登録されたPNGを等倍ドット表示で確認できます。キャラ・敵・ボスは64×64、最大16色。タップすると画像ファイルが開きます。</p>
+<nav id="tabs" aria-label="素材カテゴリ"></nav><p id="status">素材データを読み込み中…</p><div id="grid" class="grid"></div>
+<script>
+'use strict';
+const sets=[['enemy','通常・上位敵'],['boss','ボス'],['character','主人公'],['floor','床'],['wall','壁'],['prop','オブジェクト'],['projectile','弾'],['icon','属性']];
+const tabs=document.getElementById('tabs'),status=document.getElementById('status'),grid=document.getElementById('grid');
+let data,selected='enemy';
+const display={abyss_eye:'深淵の魔眼',crystal_beast:'結晶獣',crystal_golem:'蒼氷の結晶体',dark_mage:'闇の魔導士',evil_eye:'邪眼',night_bat:'夜のコウモリ',phantom_dark:'深淵の彷徨者',poison_slime:'ポイズンスライム',slime:'スライム',sorcerer_light:'光輝の使徒',stone_golem:'岩の巨人',boss_abyss_eye:'深淵の魔眼（ボス）',boss_fire_giant:'炎の巨人',boss_ice_queen:'氷晶の女王'};
+function path(item){return '../'+item.path}
+function items(){
+ if(selected==='enemy'||selected==='boss'){
+  const category=selected==='enemy'?'enemies':'bosses';
+  return data.entity_animations.filter(e=>e.category===category).map(e=>({path:'assets/gba/v1/'+category+'/'+e.id+'/idle_0.png',name:display[e.id]||e.id,sub:e.id+' · 64×64'}));
+ }
+ return data.assets.filter(a=>a.kind===selected).map(a=>({path:a.path,name:a.path.split('/').pop().replace('.png',''),sub:a.size_px.join('×')+' · '+a.colors_rgba+'色'}));
+}
+function render(){
+ tabs.replaceChildren();
+ for(const [key,name] of sets){const b=document.createElement('button');b.textContent=name;b.setAttribute('aria-pressed',String(selected===key));b.onclick=()=>{selected=key;render()};tabs.append(b)}
+ const list=items();grid.replaceChildren();status.textContent=list.length+' 点の画像を表示中 · 規格 '+data.version;
+ for(const item of list){
+ const card=document.createElement('article');card.className='card';
+ const a=document.createElement('a');a.href=path(item);a.target='_blank';a.rel='noopener';a.className='preview';a.setAttribute('aria-label',item.name+' のPNGを開く');
+ const img=document.createElement('img');img.src=path(item);img.loading='lazy';img.alt=item.name;img.decoding='async';a.append(img);
+ const meta=document.createElement('div');meta.className='meta';
+ const strong=document.createElement('strong');strong.textContent=item.name;
+ const span=document.createElement('span');span.textContent=item.sub;
+ meta.append(strong,span);card.append(a,meta);grid.append(card)}
+}
+fetch('../assets/gba/v1/manifest.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(j=>{data=j;render()}).catch(err=>{status.textContent='素材一覧を取得できませんでした: '+err.message;});
+</script></main></body></html>

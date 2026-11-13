@@ -12,7 +12,9 @@
 
 - [制作基準と既知の制約](docs/GBA_ART_STANDARD.md)
 - [再生成・検査ツール](tools/rebuild_gba_art.py)
-- [生成された素材一覧](assets/gba/v1/) — 自動生成ワークフロー完了後に反映されます
+- [GBA規格のモンスター・ボス一覧](assets/gba/v1/previews/creature_catalog.png)
+- [GBA規格の背景・障害物・アイコン一覧](assets/gba/v1/previews/environment_catalog.png)
+- [生成されたゲーム用素材一覧](assets/gba/v1/) — 個別PNGとアトラス
 - [アート再構築ジョブ](.github/workflows/gba-pixel-art.yml)
 
 元のv2素材は比較用に残します。試作版はGBA版を優先して読み込み、生成前はv2へフォールバックします。**生成済み画像は正式な手描き原画ではなく、高精細素材からの減色・ピクセル化をベースにした暫定版**です。実機画面・モーション・シルエットは後工程で目視調整します。

@@ -25,6 +25,8 @@ jobs:
         run: python -m pip install 'Pillow>=11.0,<13'
       - name: Generate strict 16-color GBA sprites
         run: python tools/rebuild_gba_art.py --root .
+      - name: Generate documentation preview boards
+        run: python tools/create_gba_catalog.py
       - name: Reverify manifest and PNG contents
         run: |
           python -c 'from tools.rebuild_gba_art import validate; print("PASS: validated",validate("."),"GBA assets")'

@@ -54,7 +54,7 @@ public final class MainActivity extends Activity {
         webView.setWebViewClient(new WebViewClient() {
             @Override public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
-                if (!HOST.equals(uri.getHost()) || !"https".equals(uri.getScheme())) return null;
+                if (!HOST.equals(uri.getHost()) || !"https".equals(uri.getScheme())) return response404();
                 final String path = uri.getPath();
                 if (path == null || !path.startsWith(PREFIX)) return response404();
                 String relative = path.substring(PREFIX.length());

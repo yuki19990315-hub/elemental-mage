@@ -19,9 +19,10 @@ def stage(destination: Path) -> dict:
         shutil.rmtree(destination)
     destination.mkdir(parents=True)
     proto=ROOT/"prototype"
+    (destination/"prototype").mkdir(parents=True,exist_ok=True)
     for suffix in ("*.html","*.css","*.js"):
         for src in proto.glob(suffix):
-            shutil.copy2(src,destination/"prototype"/src.name) if (destination/"prototype").mkdir(parents=True,exist_ok=True) is None else None
+            shutil.copy2(src,destination/"prototype"/src.name)
     # Copy all JSON used by fetch('../data/...') even when future recipes are added.
     (destination/"data").mkdir(exist_ok=True)
     for src in (ROOT/"data").glob("*.json"):

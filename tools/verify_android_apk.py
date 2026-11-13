@@ -20,9 +20,9 @@ with zipfile.ZipFile(apk) as z:
         "assets/prototype/style.css",
         "assets/data/elements.json",
         "assets/data/fusion_recipes.json",
-        "assets/gba/v1/characters/mage_down_0.png",
-        "assets/gba/v1/enemies/poison_slime/idle_0.png",
-        "assets/gba/v1/bosses/boss_ice_queen/idle_0.png",
+        "assets/assets/gba/v1/characters/mage_down_0.png",
+        "assets/assets/gba/v1/enemies/poison_slime/idle_0.png",
+        "assets/assets/gba/v1/bosses/boss_ice_queen/idle_0.png",
     }
     missing=must-files
     assert not missing, f"Missing APK payload: {sorted(missing)}"

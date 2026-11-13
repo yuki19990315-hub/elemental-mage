@@ -26,7 +26,8 @@ jobs:
       - name: Generate strict 16-color GBA sprites
         run: python tools/rebuild_gba_art.py --root .
       - name: Reverify manifest and PNG contents
-        run: python -c 'from tools.rebuild_gba_art import validate; print("PASS: validated",validate("."),"GBA assets")'
+        run: |
+          python -c 'from tools.rebuild_gba_art import validate; print("PASS: validated",validate("."),"GBA assets")'
       - name: Smoke-test browser prototype
         run: |
           node --check prototype/game.js

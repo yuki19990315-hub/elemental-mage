@@ -55,16 +55,31 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Check whether GitHub Pages is configured
+        id: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          code=$(curl -sS -o /dev/null -w '%{http_code}' -H "Authorization: Bearer ${GH_TOKEN}" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${REPO}/pages")
+          if [ "$code" = "200" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::GitHub Pages is disabled. Configure Settings > Pages > Build and deployment > Source: GitHub Actions."
+          fi
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
+        if: steps.site.outputs.ready == 'true'
       - uses: actions/download-artifact@v4
+        if: steps.site.outputs.ready == 'true'
         with:
           name: elemental-mage-web-preview
           path: _site
       - uses: actions/upload-pages-artifact@v3
+        if: steps.site.outputs.ready == 'true'
         with:
           path: _site
       - name: Deploy to GitHub Pages
+        if: steps.site.outputs.ready == 'true'
         id: deployment
         uses: actions/deploy-pages@v4

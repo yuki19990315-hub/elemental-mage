@@ -6,6 +6,14 @@
 
 ![ゲーム画面コンセプト（実機画面ではなく素材の配置例）](assets/previews/mobile_mockup.svg)
 
+## スマホで開くWeb試作版
+
+- [Elemental Mage Web版](https://yuki19990315-hub.github.io/elemental-mage/)
+- [GBAモンスター・背景素材ギャラリー](https://yuki19990315-hub.github.io/elemental-mage/gallery/)
+- [公開状況と初期設定](docs/WEB_PREVIEW.md)
+
+**公開条件:** GitHubの `Settings → Pages → Source` を `GitHub Actions` に設定してください（未設定時は404になります）。素材・ゲームを含むWebビルドは自動テストで確認します。
+
 ## GBAピクセルアート再構築（パーソナライズ適用）
 
 **アートの最新使用先は `assets/gba/v1/` です。** キャラ・敵11体・ボス3体を64×64の実ピクセルグリッド、透明を含む最大16色に統一。床・壁32×32、障害物64×64、弾16×16、属性アイコン24×24。輪郭・足元基準点・アルファを検証し、全身が入るよう素材を正規化します。

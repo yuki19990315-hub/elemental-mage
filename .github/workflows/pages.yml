@@ -18,14 +18,10 @@ concurrency:
   group: "github-pages"
   cancel-in-progress: true
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -45,6 +41,23 @@ jobs:
           test -f _site/gallery/index.html
           test -f _site/prototype/index.html
           test -f _site/assets/gba/v1/manifest.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: elemental-mage-web-preview
+          path: _site
+          if-no-files-found: error
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/download-artifact@v4
+        with:
+          name: elemental-mage-web-preview
+          path: _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

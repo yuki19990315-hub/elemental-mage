@@ -32,6 +32,8 @@ jobs:
           python -c 'from tools.rebuild_gba_art import validate; assert validate(".") >= 200'
           node --check prototype/game.js
           node tools/smoke_test.js
+          node --check prototype/ui.js
+          node tools/test_app_shell.js
       - name: Assemble static web site
         run: |
           mkdir -p _site
@@ -54,6 +56,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/download-artifact@v4
         with:
           name: elemental-mage-web-preview

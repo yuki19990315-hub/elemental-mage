@@ -33,7 +33,7 @@ click({action:'equip',element:'water'});assert.equal(snap.gear[1],'water');asser
 click({go:'codex'});assert.ok(nodes['content-screen'].innerHTML.includes('モンスター図鑑'));
 click({action:'monster',monster:'poison_slime'});assert.ok(nodes['dialog-host'].innerHTML.includes('突進'));click({action:'close-dialog'});
 click({go:'upgrade'});click({action:'upgrade',upgrade:'rapid'});assert.ok(snap.mutations.includes('rapid'));
-click({go:'summon'});click({action:'summon'});assert.ok(nodes['content-screen'].innerHTML.includes('召喚デモ'));
+click({go:'summon'});click({action:'summon'});assert.ok(nodes['content-screen'].innerHTML.includes('召喚演出デモ'));
 click({go:'inventory'});assert.ok(nodes['content-screen'].innerHTML.includes('所持品'));
 click({go:'profile'});assert.ok(nodes['content-screen'].innerHTML.includes('プロフィール'));
 click({go:'quests'});assert.ok(nodes['content-screen'].innerHTML.includes('ミッション'));

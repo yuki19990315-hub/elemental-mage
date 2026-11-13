@@ -23,3 +23,5 @@ jobs:
           node tools/smoke_test.js
           node tools/test_mechanics_v4.js
           node tools/test_runtime_vm.js
+          node --check prototype/ui.js
+          node tools/test_app_shell.js

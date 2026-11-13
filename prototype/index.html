@@ -1,10 +1,53 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#141426">
-<title>Elemental Mage — 8属性バトル試作</title>
-<link rel="stylesheet" href="./style.css"></head><body>
-<main><canvas id="game" width="360" height="640" aria-label="見下ろし縦画面・8属性と新モンスターに対応した試作"></canvas>
-<section><strong>Elemental Mage</strong> · 環境・追加ギミック試作 v4（完成版ではありません）
-<p>最初に祭壇で属性を選択。左下パッドで移動、右下3ボタンで装備中の2属性と合成魔法を攻撃。敵の赤い予告線を避け、拾った魔導石で装備を変更。敵弾吸収、地形の属性反応、強化選択、精霊、呪い祭壇、分岐ルートにも対応。PCはWASD/矢印キー・J/K/Lです。</p></section></main>
-<script src="./logic.js"></script><script src="./mechanics_v4.js"></script><script src="./game.js" defer></script></body></html>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+<meta name="theme-color" content="#110b22">
+<meta name="description" content="Elemental Mage — GBA風ドット絵の属性合成ローグライト。スマホ用UI試作。">
+<title>Elemental Mage | モバイルUI試作</title>
+<link rel="stylesheet" href="./style.css">
+</head><body>
+<main class="app" id="app">
+ <header class="topbar">
+  <div class="brand-mark" aria-hidden="true">✦</div>
+  <div class="brand-copy"><div class="brand-name">Elemental Mage</div><div class="brand-sub">PIXEL ROGUELITE · UI PROTOTYPE</div></div>
+  <button type="button" class="square-icon" id="quick-menu" aria-label="メニューを開く" data-go="menu">☰</button>
+ </header>
+ <section class="viewport" id="viewport" aria-live="polite">
+  <div id="home-screen" class="home-scene">
+   <div class="home-stars" aria-hidden="true">✦ ✧ ✦</div>
+   <div class="home-eyebrow">魔法と結晶に導かれる冒険</div>
+   <h1 class="home-title">Elemental<br><span>Mage</span></h1>
+   <div class="hero-display">
+    <div class="magic-ring" aria-hidden="true"></div>
+    <img src="../assets/gba/v1/characters/mage_down_0.png" class="home-mage" alt="主人公の魔法使い">
+   </div>
+   <p class="home-desc">2つの属性を組み合わせて<br>変化するダンジョンに挑もう。</p>
+   <div class="home-actions">
+    <button class="ornate-btn primary" data-action="new-run">✦ 冒険をはじめる</button>
+    <button class="ornate-btn" data-go="battle">▶ つづきから</button>
+    <button class="ornate-btn subtle" data-go="codex">モンスター図鑑を見る</button>
+   </div>
+   <div class="mini-banner">開発中のブラウザ試作 · セーブ未対応</div>
+  </div>
+  <div id="battle-screen" class="battle-scene" hidden>
+   <div class="battle-top"><span>✦ BATTLE</span><button class="tiny-btn" data-action="pause">Ⅱ メニュー</button></div>
+   <canvas id="game" width="360" height="640" aria-label="見下ろし型の8属性弾幕アクションゲーム"></canvas>
+   <p class="battle-tip">左で移動／右の3ボタンで攻撃 · PCは WASD / J K L</p>
+  </div>
+  <div id="content-screen" class="content-screen" hidden></div>
+ </section>
+ <nav class="bottom-nav" aria-label="メインナビゲーション">
+  <button data-go="home" class="nav-tab active"><span class="nav-symbol">⌂</span><span>ホーム</span></button>
+  <button data-go="battle" class="nav-tab"><span class="nav-symbol">⚔</span><span>バトル</span></button>
+  <button data-go="party" class="nav-tab"><span class="nav-symbol">✦</span><span>装備</span></button>
+  <button data-go="codex" class="nav-tab"><span class="nav-symbol">◈</span><span>図鑑</span></button>
+  <button data-go="menu" class="nav-tab"><span class="nav-symbol">☷</span><span>メニュー</span></button>
+ </nav>
+ <div id="dialog-host" class="dialog-host" hidden role="dialog" aria-modal="true"></div>
+ <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</main>
+<script src="./logic.js"></script>
+<script src="./mechanics_v4.js"></script>
+<script src="./game.js" defer></script>
+<script src="./ui.js" defer></script>
+</body></html>

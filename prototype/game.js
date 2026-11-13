@@ -66,7 +66,7 @@ function createMob(kind,x,y,isBoss=false){
   return mob;
 }
 function start(){
-  player={x:180,y:425,angle:-Math.PI/2,hp:100,maxHp:100,gear:['neutral','neutral'],inv:0,mana:0,mastery:{},mutations:[],familiar:false,familiarCooldown:1,cursedPower:0};
+  player={x:180,y:425,angle:-Math.PI/2,hp:100,maxHp:100,gear:['neutral','neutral'],collection:['neutral'],inv:0,mana:0,mastery:{},mutations:[],familiar:false,familiarCooldown:1,cursedPower:0};
   stage=1;room=1;cooldowns=[0,0,0];mode='altar';rewardOptions=randomElements(2);selected=null;swapFromPreboss=false;mutationOptions=[];routeChoice='safe';
   enemies=[];shots=[];walls=[];pickups=[];fields=[];
 }
@@ -275,6 +275,7 @@ function updateFields(dt){for(let i=fields.length-1;i>=0;i--){const f=fields[i];
 }}
 function update(dt){
   frameTick+=dt;if(mode!=='battle')return;
+  if(globalThis.ElementalAppShell?.isPaused?.())return;
   elapsed+=dt;cooldowns=cooldowns.map(c=>Math.max(0,c-dt));player.inv=Math.max(0,player.inv-dt);
   let mx=Number(!!kbd.KeyD||!!kbd.ArrowRight)-Number(!!kbd.KeyA||!!kbd.ArrowLeft)+stick.x;
   let my=Number(!!kbd.KeyS||!!kbd.ArrowDown)-Number(!!kbd.KeyW||!!kbd.ArrowUp)+stick.y;
@@ -419,10 +420,10 @@ function tapOverlay(x,y){if(mode==='battle')return false;
    M.curse(player,x<180);room++;resetRoom(false);
  }return true;}
  if((mode==='altar'||mode==='preboss')&&y>=225&&y<=397){
-   const sourceMode=mode;selected=rewardOptions[x<180?0:1];if(sourceMode==='altar'){player.gear[0]=selected;selected=null;resetRoom(false)}else{swapFromPreboss=true;mode='swap';}return true;
+   const sourceMode=mode;selected=rewardOptions[x<180?0:1];if(sourceMode==='altar'){player.gear[0]=selected;if(!player.collection.includes(selected))player.collection.push(selected);selected=null;resetRoom(false)}else{swapFromPreboss=true;mode='swap';}return true;
  }
  if(mode==='swap'){
-   if(y>=224&&y<=388){player.gear[x<180?0:1]=selected;selected=null;if(swapFromPreboss){swapFromPreboss=false;resetRoom(true)}else mode='battle';return true;}
+   if(y>=224&&y<=388){player.gear[x<180?0:1]=selected;if(!player.collection.includes(selected))player.collection.push(selected);selected=null;if(swapFromPreboss){swapFromPreboss=false;resetRoom(true)}else mode='battle';return true;}
    if(y>=410&&!swapFromPreboss){selected=null;mode='battle';return true;}
  }
  return true;
@@ -441,4 +442,28 @@ window.addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','Arr
  if(e.code==='Enter'&&mode!=='battle'){tapOverlay(110,300);}kbd[e.code]=true;});
 window.addEventListener('keyup',e=>kbd[e.code]=false);
 let last=performance.now();function loop(now){const dt=clamp((now-last)/1000,0,.033);last=now;if(player){update(dt);drawScene();}requestAnimationFrame(loop)}
+
+/* Read-only snapshots plus opt-in prototype UI actions; core combat remains canvas-driven. */
+globalThis.ElementalGameUI={
+ snapshot(){
+  if(!player)return null;
+  return {mode,stage,room,boss,hp:Math.round(player.hp),maxHp:player.maxHp,mana:Math.floor(player.mana),
+   gear:[...player.gear],collection:[...new Set(player.collection||['neutral',...player.gear])],
+   mutations:[...player.mutations],mastery:{...player.mastery},cursedPower:player.cursedPower,
+   familiar:player.familiar,enemyCount:enemies.length,routeChoice};
+ },
+ startNew(){start();},
+ equip(slot,element){
+  if(!player||![0,1].includes(slot))return false;
+  if(!(player.collection||[]).includes(element))return false;
+  player.gear[slot]=element;return true;
+ },
+ mutationOptions(){return M.MUTATIONS.map(m=>({...m,active:!!player?.mutations.includes(m.id)}));},
+ tryMutation(id){return !!player&&M.applyMutation(player,id);},
+ setHeal(amount){if(!player||amount<=0)return false;player.hp=Math.min(player.maxHp,player.hp+amount);return true;},
+ cardAssets:{
+  enemies: {...artEnemy},bosses:{...artBoss},names:{...enemyNames,...bossNames}
+ }
+};
+
 loadData().finally(()=>start());requestAnimationFrame(loop);

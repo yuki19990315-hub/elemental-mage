@@ -1,0 +1,44 @@
+name: Rebuild personalized GBA pixel art
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/gba-pixel-art.yml'
+      - 'tools/rebuild_gba_art.py'
+      - 'assets/sprites/v2/**'
+      - 'assets/environment/v2/**'
+      - 'assets/projectiles/*.png'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image processing dependency
+        run: python -m pip install 'Pillow>=11.0,<13'
+      - name: Generate strict 16-color GBA sprites
+        run: python tools/rebuild_gba_art.py --root .
+      - name: Reverify manifest and PNG contents
+        run: python -c 'from tools.rebuild_gba_art import validate; print("PASS: validated",validate("."),"GBA assets")'
+      - name: Smoke-test browser prototype
+        run: |
+          node --check prototype/game.js
+          node tools/smoke_test.js
+      - name: Commit rebuilt GBA art
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/gba/v1
+          if ! git diff --cached --quiet; then
+            git commit -m 'art: rebuild all 16-color GBA sprites [skip ci]'
+            git push
+          else
+            echo 'GBA assets are already current'
+          fi

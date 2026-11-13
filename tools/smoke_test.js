@@ -24,3 +24,10 @@ for(const feature of ['poison_slime','crystal_golem','abyss_eye','sorcerer_light
 console.log('PASS: 9 element states, 28 fusion recipes, 11 enemies, 3 bosses, prototype mechanics');
 // V4 extensions are explicitly loaded, not merely present in the repository.
 for(const feature of ['M.randomMutations','M.terrainReact','M.absorb','ENV_THEMES','mode=\'route\'','mode=\'curse\''])assert(game.includes(feature),'missing v4 feature '+feature);
+
+// The browser must prefer the current GBA art pipeline without removing v2 fallbacks.
+const gbaGame=fs.readFileSync(path.join(root,'prototype/game.js'),'utf8');
+for (const snippet of ["const GBA_ROOT=", "GBA_ROOT+'tiles/'", "GBA_ROOT+'props/'", "GBA_ROOT+'projectiles/'", "GBA_ROOT+'icons/'", "GBA_ROOT+'characters/'"]) {
+  assert(gbaGame.includes(snippet), 'GBA art path missing: '+snippet);
+}
+console.log('PASS: GBA art routing enabled in portrait prototype');

@@ -16,6 +16,7 @@ const bossNames={lava_titan:'灼熱の巨人',frost_queen:'氷晶の女王',abys
 const eStats={slime:[30,38,11],eyeball:[38,23,11],cultist:[43,21,11],crystal:[54,21,13],bat:[30,52,10],golem:[90,18,18],poison_slime:[56,39,16],crystal_golem:[135,16,21],abyss_eye:[65,24,13],sorcerer_light:[60,20,13],phantom_dark:[70,39,14]};
 const bStats={lava_titan:[310,16,32],frost_queen:[270,21,29],abyss_eye_boss:[310,18,31]};
 const cache=new Map();
+const GBA_ROOT='../assets/gba/v1/'; // Strict 64px/16-color design; old art remains a loading fallback.
 const ENV_THEMES=['cursed_stone','ice_sanctum','lava_temple','abyss_shrine','holy_ruins'];
 const ENV_PROPS={
   crate:['cursed_crate','rune_crate'],barrel:['iron_barrel','chained_barrel'],
@@ -25,12 +26,13 @@ const ENV_PROPS={
 };
 function theme(){return ENV_THEMES[(stage-1)%ENV_THEMES.length]}
 function envTile(kind,index,x,y,w=64,h=64){
-  const file='../assets/environment/v2/tiles/'+theme()+'/'+kind+'_'+index+'.png';
-  if(!sprite(file,x,y,w,h))oldSVG('tiles/'+(theme()==='ice_sanctum'?'ice':theme()==='lava_temple'?'lava':'stone')+'_'+(kind==='floor'?'floor_'+(index%4):'wall'),x,y,w,h);
+  const file=GBA_ROOT+'tiles/'+theme()+'/'+kind+'_'+index+'.png';
+  const legacy='../assets/environment/v2/tiles/'+theme()+'/'+kind+'_'+index+'.png';
+  if(!sprite(file,x,y,w,h)&&!sprite(legacy,x,y,w,h))oldSVG('tiles/'+(theme()==='ice_sanctum'?'ice':theme()==='lava_temple'?'lava':'stone')+'_'+(kind==='floor'?'floor_'+(index%4):'wall'),x,y,w,h);
 }
 function drawObstacle(o){
   const picture=o.art||ENV_PROPS[o.kind]?.[0];
-  if(!picture||!sprite('../assets/environment/v2/props/'+picture+'.png',o.x-26,o.y-27,52,52))
+  if(!picture||(!sprite(GBA_ROOT+'props/'+picture+'.png',o.x-26,o.y-27,52,52)&&!sprite('../assets/environment/v2/props/'+picture+'.png',o.x-26,o.y-27,52,52)))
     oldSVG('obstacles/'+o.kind,o.x-17,o.y-17,34,34);
 }
 
@@ -305,9 +307,10 @@ function drawMob(m){
   const inAttack=m.attackFx>0||m.state==='windup'||m.state==='laser_windup';
   const state=m.stun>0?'stun':m.hitFx>0?'hit':inAttack?'attack_'+(Math.floor(frameTick*9)%2):dist(m,player)>58?'move_'+(Math.floor(frameTick*6)%2):'idle_'+(Math.floor(frameTick*3)%2);
   const size=m.isBoss?90:(m.kind==='crystal_golem'||m.kind==='golem'?55:43),base=m.isBoss?'bosses':'enemies';
-  const file=`../assets/sprites/v2/${base}/${id}/${state}.png`;
+  const file=`${GBA_ROOT}${base}/${id}/${state}.png`;
+  const legacyFile=`../assets/sprites/v2/${base}/${id}/${state}.png`;
   const fallback=m.isBoss?`bosses/${legacyBoss[m.kind]}`:`enemies/${legacyEnemy[m.kind]||'slime'}_0`;
-  if(!sprite(file,m.x-size/2,m.y-size*.64,size,size))oldSVG(fallback,m.x-size/2,m.y-size*.64,size,size);
+  if(!sprite(file,m.x-size/2,m.y-size*.64,size,size)&&!sprite(legacyFile,m.x-size/2,m.y-size*.64,size,size))oldSVG(fallback,m.x-size/2,m.y-size*.64,size,size);
   if(m.parts)for(const part of m.parts)if(part.hp>0){disk(m.x+part.dx,m.y+part.dy,6,'#a5f6ff','#5c6fff');}
   if(m.hitFx>0){ctx.fillStyle='#fff9';ctx.fillRect(m.x-m.r,m.y-m.r,m.r*2,m.r*2);}
   const w=m.isBoss?72:35;
@@ -328,14 +331,19 @@ function drawWorld(){
   for(const p of pickups){disk(p.x,p.y,13,color(p.element)+'88','#ffffff');drawElementIcon(p.element,p.x-9,p.y-9,18)}
   for(const m of enemies)drawMob(m);
   for(const b of shots){const hue=b.friendly?color(b.element==='fusion'?player.gear[0]:b.element):color(b.element);disk(b.x,b.y,b.r+(b.friendly&&(player.mastery[b.element]||0)>=25?2:0),hue,b.friendly?'#ffffff':'#751d38');
-    sprite('../'+b.spritePath,b.x-(b.friendly?12:9),b.y-(b.friendly?12:9),b.friendly?24:18,b.friendly?24:18);}
+    const x=b.x-(b.friendly?12:9),y=b.y-(b.friendly?12:9),sz=b.friendly?24:18;
+    const stem=b.spritePath.split('/').pop().replace(/\.svg$/,'.png');
+    if(!sprite(GBA_ROOT+'projectiles/'+stem,x,y,sz,sz))sprite('../'+b.spritePath,x,y,sz,sz);}
   if(player.familiar){disk(player.x+18+Math.cos(frameTick*3)*9,player.y-22+Math.sin(frameTick*3)*7,7,'#94e3ff','#f8f9ff');}
   const angle=player.angle,dir=Math.abs(Math.cos(angle))>Math.abs(Math.sin(angle))?(Math.cos(angle)>0?'right':'left'):(Math.sin(angle)>0?'down':'up');
-  if(player.inv===0||Math.floor(frameTick*13)%2===0)oldSVG('characters/mage_'+dir+'_'+(Math.floor(frameTick*7)%2),player.x-17,player.y-17,34,34);
+  if(player.inv===0||Math.floor(frameTick*13)%2===0){
+    const name='mage_'+dir+'_'+(Math.floor(frameTick*7)%2);
+    if(!sprite(GBA_ROOT+'characters/'+name+'.png',player.x-22,player.y-32,44,44))oldSVG('characters/'+name,player.x-17,player.y-17,34,34);
+  }
 }
 function drawElementIcon(el,x,y,s){
  const newIcon=['neutral','light','dark'].includes(el),path=newIcon?'../assets/concepts/icons/'+el+'.svg':'../assets/icons/'+el+'.svg';
- if(!sprite(path,x,y,s,s)){disk(x+s/2,y+s/2,s*.34,color(el));labelText(label(el),x+s/2,y+s*.62,Math.max(10,s*.4),'#1c1630','center')}
+ if(!sprite(GBA_ROOT+'icons/'+el+'.png',x,y,s,s)&&!sprite(path,x,y,s,s)){disk(x+s/2,y+s/2,s*.34,color(el));labelText(label(el),x+s/2,y+s*.62,Math.max(10,s*.4),'#1c1630','center')}
 }
 function drawHud(){
   ctx.fillStyle='#0d1028ea';ctx.fillRect(8,8,344,56);

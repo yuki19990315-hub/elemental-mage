@@ -1,0 +1,5051 @@
+{
+  "version": "GBA-v1",
+  "rules": {
+    "characters_monsters_bosses_canvas": [
+      64,
+      64
+    ],
+    "max_RGBA_colors_including_transparent": 16,
+    "alpha_values_allowed": [
+      0,
+      255
+    ],
+    "no_antialias": true,
+    "native_pixel_grid": true,
+    "transparent_png": true,
+    "tile_canvas": [
+      32,
+      32
+    ],
+    "icon_canvas": [
+      24,
+      24
+    ],
+    "projectile_canvas": [
+      16,
+      16
+    ]
+  },
+  "origin": "Converted from project-owned high-detail concept PNGs; hand-drawn 64px protagonist and icons",
+  "status": "candidate_art_not_verified_on_device",
+  "entity_animations": [
+    {
+      "id": "abyss_eye",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "crystal_beast",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "crystal_golem",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "dark_mage",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "evil_eye",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "night_bat",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "phantom_dark",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "poison_slime",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "slime",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "sorcerer_light",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "stone_golem",
+      "category": "enemies",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "boss_abyss_eye",
+      "category": "bosses",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "boss_fire_giant",
+      "category": "bosses",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    },
+    {
+      "id": "boss_ice_queen",
+      "category": "bosses",
+      "frame_size": [
+        64,
+        64
+      ],
+      "frames": [
+        "idle_0.png",
+        "idle_1.png",
+        "move_0.png",
+        "move_1.png",
+        "attack_0.png",
+        "attack_1.png",
+        "hit.png",
+        "stun.png"
+      ],
+      "atlas": "atlas.png",
+      "columns": 4,
+      "rows": 2,
+      "fps_idle": 3,
+      "fps_move": 6,
+      "fps_attack": 8,
+      "anchor": [
+        32,
+        62
+      ],
+      "visual_review": "pending"
+    }
+  ],
+  "enemy_aliases": {
+    "slime": "slime",
+    "eyeball": "evil_eye",
+    "cultist": "dark_mage",
+    "crystal": "crystal_beast",
+    "bat": "night_bat",
+    "golem": "stone_golem",
+    "poison_slime": "poison_slime",
+    "crystal_golem": "crystal_golem",
+    "abyss_eye": "abyss_eye",
+    "sorcerer_light": "sorcerer_light",
+    "phantom_dark": "phantom_dark"
+  },
+  "boss_aliases": {
+    "lava_titan": "boss_fire_giant",
+    "frost_queen": "boss_ice_queen",
+    "abyss_eye_boss": "boss_abyss_eye"
+  },
+  "assets": [
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/abyss_eye/idle_0.png",
+      "sha256": "bee58d709f4a7b355052ab5569ac029faf56d6e95080e6f5bf790e9250f23b6d",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/abyss_eye/idle_1.png",
+      "sha256": "a59ff44c8415332c8cab038650c066635d01586bf7f073697a5ee823adffb0e1",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/abyss_eye/move_0.png",
+      "sha256": "9e40abbbbca5bfae4f5d638a040ea9d303fa5dd9bce03153ba41a9020a15f631",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/abyss_eye/move_1.png",
+      "sha256": "cd95110ff3186f04752d8206cb9abe5fd7cc1869e1ff52207b86f9d302d611cc",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/abyss_eye/attack_0.png",
+      "sha256": "c433634502c6796b82509ddab0238788a123619a1a9fddd14794194f65190ce2",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/abyss_eye/attack_1.png",
+      "sha256": "cfbb2a63c0bf49c0556c08666c07549d026158a51c5a0d93ed555ca0db3ac012",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/abyss_eye/hit.png",
+      "sha256": "5ba7bd3e8652e3bcddcd5a70afb8849e48578b6b08055eb15d55b7c56d1ac315",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/abyss_eye/stun.png",
+      "sha256": "5393e85920f39afa42fac57e7a09458f0a43d1afd183ad79492155ddf82d6e28",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/abyss_eye/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "d1af2737d96c0e7688d56396ba86b673cd1490f6bff45d4dd5e75433da1c4ace",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_beast/idle_0.png",
+      "sha256": "87d7964d85538da256286c2b096cbc7bf3fc436520e91d16d77cf2aa9f76c629",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_beast/idle_1.png",
+      "sha256": "bf7066304301becaa06b73d3d38e49431386bc60d6ab51926e85c89dd611abee",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_beast/move_0.png",
+      "sha256": "8fffb6bf3c93a5b8d7eb92be2bac87768399309d64fd7b2dbc95dcefb5d225a5",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_beast/move_1.png",
+      "sha256": "70a76f95f2c356342f741b7b78317dd06fe00e6258189eda9035609f7fbe2747",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_beast/attack_0.png",
+      "sha256": "226d8843b335bc90085c76c0b47ee1c24e85d9b5bf73d581a042efa5c12c0a03",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_beast/attack_1.png",
+      "sha256": "35028c0cfa816f4442d8a8fbfbc798211db448d1060741d89bd374349ed576b3",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_beast/hit.png",
+      "sha256": "5c0e140333163e2ac6ae217d94fc7da206bff08da003ae120cc44f07483286cb",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_beast/stun.png",
+      "sha256": "2540876178ac8075783fcaff3054e9687e2e97085856d1a531c3124b539ce1b1",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_beast/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "6744e525897edec990928d65ac0ffaf28359235d8e1e9c4fe6bed62fa51a4fd2",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_golem/idle_0.png",
+      "sha256": "fc89812c1d4fde02b733fdec84454dde3c4f2c5abcb504707995c785b904a81a",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_golem/idle_1.png",
+      "sha256": "eacc93db82979916792f3a734faa11f9020ffaf69fe98f14b8c52346f4699dcc",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_golem/move_0.png",
+      "sha256": "f6f0ff8412c7c4c7e99fbd566edda2494c8c1094863da0d5aa71317be382ef16",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_golem/move_1.png",
+      "sha256": "583dea2d0973e42202bcb38a31a81e4f0540740f275a5393924f1141cd8364da",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_golem/attack_0.png",
+      "sha256": "c17c169c6f2b6f4b2f5a764f9924ab2336041084faff4c22f23eee7fb068028a",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_golem/attack_1.png",
+      "sha256": "fb7c6d71773922e940ce3f16b5bc6b7f8aad4f2d77fa3683714477172d6e2f60",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_golem/hit.png",
+      "sha256": "3727a88549c2b803f3e3bd696bd3486dffc81bedc985789b494377fee93701d5",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/crystal_golem/stun.png",
+      "sha256": "c0e56b77a4d061f08c097cab7e62f820ad1a6d655d294ee28fe85ddd3fdf74d4",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/crystal_golem/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "a0c1595b6839279ab112d82dd31728818a7a156b2993e2a1590b5d0f7180b098",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/dark_mage/idle_0.png",
+      "sha256": "46d3ba6b2ce1b53a00690d2e67d2eefa2053d625af7cc7aef9ba912835ef8273",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/dark_mage/idle_1.png",
+      "sha256": "dc8c3c62fb05f773ae2f95c943acb2f0f5a5bb9efb12ad930dd6e774b7f45f9e",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/dark_mage/move_0.png",
+      "sha256": "9c0dc64830e0048149d4a501c160caccf1775700fd783f596eeecb92f061c548",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/dark_mage/move_1.png",
+      "sha256": "38c98b2581295bc351beb767c641105dae8465a4f6f70d5d54227e6fec3b1922",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/dark_mage/attack_0.png",
+      "sha256": "3d7d80d6449d76bddc66e96ba97b462ac7bde0c52485b0e4e31ccbc12b123b5e",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/dark_mage/attack_1.png",
+      "sha256": "23d58c091f87a77ff9aa0527ff64deb26a6c24565067e70ce945787a078fc5d4",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/dark_mage/hit.png",
+      "sha256": "bc579f7dfa536ccc8c3cb679cfc49c5fff2cd0e7d2ba0705e13aaab51978444c",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/dark_mage/stun.png",
+      "sha256": "05c2030ea81580cd3b75d5d0bf764a9558a5af899ed35bf4ec17e0595c465de2",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/dark_mage/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "a7cf330e49834d1bdced321a756a3e4891f86c7121ee3dde9145637338c2e298",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/evil_eye/idle_0.png",
+      "sha256": "1cc11504814ae9bbc809db8275580eace9fe4348dcb93b36a0d95ed2784ac645",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/evil_eye/idle_1.png",
+      "sha256": "0c78a366edf2dbc46459be52c7badc325f80546f169a3d4f3e93e1ff2342039a",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/evil_eye/move_0.png",
+      "sha256": "9e068a07e92a07a33f0ab9d534c92034249967668c2ccb0c823a360513ad1173",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/evil_eye/move_1.png",
+      "sha256": "c1bff688473afa9df53c6103b9bc2af0ba7d41d04a912f9fcd3e61ee428228f9",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/evil_eye/attack_0.png",
+      "sha256": "c505f42186cb4d152c321dd87ccea97acd315addd921bd7f9b507e81053f6815",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/evil_eye/attack_1.png",
+      "sha256": "b69a0d539d08a2443ebbd00dce1a81095fc71c14cd69bdac52eeb967c3985334",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/evil_eye/hit.png",
+      "sha256": "4cfa003aae805268df8eaf141937720a8c12f1e878c069500cd040d15adde8fd",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/evil_eye/stun.png",
+      "sha256": "6f04dfce0159f87e13935fa590cf39ffd44ab1633dc74208020588b1afc2e9d3",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/evil_eye/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "1b423be10164c0ad11d37d44711f4e247b95fa937437890221e69ec0cc6e769f",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/night_bat/idle_0.png",
+      "sha256": "c44e2521662c82d23dd54d0d328270a895514f008c1812d335bc3d571ee6df29",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/night_bat/idle_1.png",
+      "sha256": "e9e570ccd82dc8ea344f007668844c39c8d54f8fa91e156b4803f972759e767b",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/night_bat/move_0.png",
+      "sha256": "72325fd0652c4b7e2de21b3707c5ca670352d9a4d10596c555cf5a34631c7674",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/night_bat/move_1.png",
+      "sha256": "4cd8dd3bf899b43224d4e8b1a8e66b7503082ecc643a32737eba85936776f0dc",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/night_bat/attack_0.png",
+      "sha256": "6a50411389f057616e7d894e8faad2e4c0cacf21bd5343727d2ca2c082cb7bd8",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/night_bat/attack_1.png",
+      "sha256": "b937d4ea83b992b921d87fb07d2ea57baf500bc418faeb89aaa71cf4fa9c9217",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/night_bat/hit.png",
+      "sha256": "7e8eccdf119dc4ad66be3d99eef8d9b6e2928ceedc4e43b124501f806d200fa0",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/night_bat/stun.png",
+      "sha256": "b7ba02ad84c03535fe18190055a2d61e534eb7f11020fb234da727ff870a6360",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/night_bat/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "4c1a9f38d765cf7bd2c0d7b076fdf3eb917141203113d2e9bb80d46d02b7f275",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/phantom_dark/idle_0.png",
+      "sha256": "962b4a343911644d8ba23c877426aca52b1045bedd978e5328019c1c87baa6ae",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/phantom_dark/idle_1.png",
+      "sha256": "46f302bb740cc1dba60620dea6045f894aabaddc1d72f6191530fbd1982ea137",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/phantom_dark/move_0.png",
+      "sha256": "5f7b056947fbb905cd34511ec5707fd9b793828084a424e6d346e6f04e49e65f",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/phantom_dark/move_1.png",
+      "sha256": "2e5f6904c9e7636d68074812906441096ebdd7fbe8230694cd0b90c9b031b8ca",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/phantom_dark/attack_0.png",
+      "sha256": "0c2ab6f6e54a728dcabfb534d17f5aa42027c81ff29d49dd14fa1f3defa71e9c",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/phantom_dark/attack_1.png",
+      "sha256": "82ffab79decd72c06f9f69e9a02475c167feba73c77ce0bc76ffaf9947f533dd",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/phantom_dark/hit.png",
+      "sha256": "aebde5ae027d175eecf79a58a6e2096414c1c182f7d54a40238971e77cd05a75",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/phantom_dark/stun.png",
+      "sha256": "9a419c51e1fab3484a3de335c9d120b66af28cb97948f129a1bc4db55f7a9382",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/phantom_dark/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "8bc6ef770fee94f5cd430f29df4af5c915cbe10c6071c739c0e7da237196026f",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/poison_slime/idle_0.png",
+      "sha256": "5fca56973d569d74a40d73757d880bd5502a6eee1914ef77a46ef1773bc7be92",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/poison_slime/idle_1.png",
+      "sha256": "bf8fde387f05fb7d5fa54e598354406c41f343b31643c8245b8153c7601ed2d7",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/poison_slime/move_0.png",
+      "sha256": "9d018837747127541fb115bf16e6954ffb112434b18689b1f37f6578b36ce284",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/poison_slime/move_1.png",
+      "sha256": "d41408d25b818e3b0229f0a635488d53f83df58abff3670c3f81081f6eb6c8a3",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/poison_slime/attack_0.png",
+      "sha256": "11c4cb43efbe58d1f6f5eccc175f43891889e5821de45f9a162168690d40e797",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/poison_slime/attack_1.png",
+      "sha256": "714a5bba0c15ec1ca633a930fd62f1ebbf476114886cca18f8d0889ecb6b064f",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/poison_slime/hit.png",
+      "sha256": "da723659c2c590068f54a7ddde01367cda990115737a980430ef4e2129f0f73a",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/poison_slime/stun.png",
+      "sha256": "b42ecb148a049d22f4aa5ba3b96c1581dd02ea7a7ece5d5c14c72b5aaae546af",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/poison_slime/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "ba5af6e5f2ef37d003bf71f75f557af1396cd500b9b3ac4b6f777c7d33ab4879",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/slime/idle_0.png",
+      "sha256": "7246dbccb35f178b5575d711423f54c0f517389c34826e55432edc319f0b2638",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/slime/idle_1.png",
+      "sha256": "a80ae60ceb7f8cae2bd8fcf5c5a79f12582add2b0f48309e1a068b1fe9156fe4",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/slime/move_0.png",
+      "sha256": "a4699481c60a4f56ce8b6f907bdcb8180949d133ecdf5a15957e7a6327dff1ba",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/slime/move_1.png",
+      "sha256": "33836416c445ac28500af099ab694b3c16ae8949668877e404838557ebda5102",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/slime/attack_0.png",
+      "sha256": "acdf7468f4b6ba7f725a8997915c220b2b5f6f7d39cfd86c147831f82a7baadc",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/slime/attack_1.png",
+      "sha256": "4c5f482827de5f469366526f69ab3ebeeb72bab05fc687a8f3cf7f700a193b1b",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/slime/hit.png",
+      "sha256": "b96a1267538c0b95c6f51b0202a23c4f1a21ad5f1b7ef2aad937fa3f2e0251a3",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/slime/stun.png",
+      "sha256": "5c3f00c78ffc30df152135efe8b799e3c8887e4a97a991ca45bcc8a4bcd8945b",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/slime/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "97fa9be07c11c4b306181a180b134d0dfa443b42343c55b6c8b5101e58daacbf",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/sorcerer_light/idle_0.png",
+      "sha256": "4615be793008e59004ae2fe5cc5514a8ef996de42230e080e5e78bd2f2fbd15d",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 12,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/sorcerer_light/idle_1.png",
+      "sha256": "a80e5249c8c55b5321446fdcbfa87552d50403d0ae6c91f1010fe58315d4226d",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/sorcerer_light/move_0.png",
+      "sha256": "b31b0d6b19b3d3238311f92782cef506868f54ad57240a949bd08627a2b5fa51",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/sorcerer_light/move_1.png",
+      "sha256": "f5f4c29dff3131bb00ae471daee42a6a26e8466d0981d5dbe12f9b4a65b8f728",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 12,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/sorcerer_light/attack_0.png",
+      "sha256": "08ec7290b490dbc0f2dd7f946ba6428503d4f0638e5c8bdc55a0e0a81b5c3abb",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 12,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/sorcerer_light/attack_1.png",
+      "sha256": "5b6342f8ff6eabdb33907a0f0161c8ba55c50d7f832bf1d8bd00b31092d9e2c8",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/sorcerer_light/hit.png",
+      "sha256": "443f531961d0d0d729c3a0949e5d6fb8a6e03f72514ef4eae8bcb61c3da29a47",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/sorcerer_light/stun.png",
+      "sha256": "9dd2ccb75fdcc8aca13df346546cd7144a26d6090356758255e96db362c2b5af",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/sorcerer_light/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "4a70da624d8c3c3d1407bfc73a036418c71d590b218be28f57712f802271ea30",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/idle_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/stone_golem/idle_0.png",
+      "sha256": "15d256cb338d9af0439ad16fbd0ea05d7517cbc0e7ad52fb72d62f43e73b33e0",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/idle_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/stone_golem/idle_1.png",
+      "sha256": "426473f4c26170e2671413aa09aed41dc8d81f24c48879c1a7dca51eabc8591c",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/move_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/stone_golem/move_0.png",
+      "sha256": "1e4ec18f4f6c81f069c738a2f1f02dd5b88c062abdc681333a05c5d4cf84b393",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/move_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/stone_golem/move_1.png",
+      "sha256": "ac118febca5556ae5f3d056db123efc14e94715b27700d2e8055d02cf6994cc6",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/attack_0.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/stone_golem/attack_0.png",
+      "sha256": "535d72e9196f952de47b9219757016c72a929456ae0deaa5f683f37c8c8f38bf",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/attack_1.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/stone_golem/attack_1.png",
+      "sha256": "980abc4253eaca17b060623cdd69568261b65161dd0ba016ede295a4ecd34b69",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/hit.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/stone_golem/hit.png",
+      "sha256": "61b1c911ab55ccaedb3ff201e41de9192f5e2ef597ce23cf4c72cddb14a59186",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/stun.png",
+      "kind": "enemies",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/enemies/stone_golem/stun.png",
+      "sha256": "dae124455fcaf9e6665441ede4d31ac03c9b94bfeb1a470f0fa278b5a5a66a9d",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 10
+      }
+    },
+    {
+      "path": "assets/gba/v1/enemies/stone_golem/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "3176c38eeb763f6658dec5c8bbcd40bc5abe779d52b093984e9b4e4f29b9d762",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/idle_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_abyss_eye/idle_0.png",
+      "sha256": "8ef14969eb2b054c047c8004a63fc3aa935110f1932478755b1bcfc553a284e8",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/idle_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_abyss_eye/idle_1.png",
+      "sha256": "0fe29b3d7ea4e3eea209c89f7fdddb03bb5ffd73fb783efe0cbaa6b2f0a457d1",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/move_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_abyss_eye/move_0.png",
+      "sha256": "d8cce12fed46fdd128222b853abb60f0a03152e4dae185db8d1675e6fdf744f1",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/move_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_abyss_eye/move_1.png",
+      "sha256": "44bada8586691875ab36b5a19676a7bb827db7c89fe67414a3b8ba28ab60a765",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/attack_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_abyss_eye/attack_0.png",
+      "sha256": "96f34010a3649e9e7b4cdf33322267cb8c61b5a144460fe9109347c910820783",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/attack_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_abyss_eye/attack_1.png",
+      "sha256": "3b345b81be2d78aa109ca289f6bbc78fb81544a84fc85035a50889c54a3057aa",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/hit.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_abyss_eye/hit.png",
+      "sha256": "5d016cea979104bfd8a1f66f2d13b31646d9c6f520744ebfe033092d9c8c40a5",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/stun.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_abyss_eye/stun.png",
+      "sha256": "bd51a3c75c9289eecac46139fc1cca4481e523973e202e6cadf260e6d2a7c4e1",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_abyss_eye/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "0f8631dd330e080fc02ba92727c97f6df45446cad671b903cedc7823ba3d4a37",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/idle_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_fire_giant/idle_0.png",
+      "sha256": "eac913c1c59b973f46459ba142b045e1d8d3a78c94a4bd29327eed41da87468a",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/idle_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_fire_giant/idle_1.png",
+      "sha256": "cc151af6050f680f89e41877f6ef01bd9791c6e8ff1d68bf752826f96e5937da",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/move_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_fire_giant/move_0.png",
+      "sha256": "28c6640e2c8ed1b558406066200e8e374b334da5e7ab446c1ce4ac8847cc128c",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/move_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_fire_giant/move_1.png",
+      "sha256": "d05a7b90ec8c61fff7814729eca0758818f9b329c45f58c5142df1eaac3dfd75",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/attack_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_fire_giant/attack_0.png",
+      "sha256": "bb2df3d6cb8b0bccde3c45dfb01185a97cb85932c5492226bcf0673a2bc6a25b",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/attack_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_fire_giant/attack_1.png",
+      "sha256": "cf5a46e4e32df20f97ab3ca2fe429108d3e3fb2117eb9482a1ce0f752b27d748",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/hit.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_fire_giant/hit.png",
+      "sha256": "ee833e574aef4136c243594dee776114dee3477e8a0dd59b4fa4db1117ee0c0d",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/stun.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_fire_giant/stun.png",
+      "sha256": "d2acf71188b428b207d8d915a9b26f2abb53f888e47610cfd7e05769fe085fca",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_fire_giant/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "33a92d5f7eef0289a5d6bb556c3b5d2a05c5df7a7b0ac4494a63c6ad96eb1085",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/idle_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_ice_queen/idle_0.png",
+      "sha256": "ec8a7f7c2559b01f1971ef83bca5c552dfaea06f63c088f691f7c710836373bb",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/idle_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_ice_queen/idle_1.png",
+      "sha256": "430b41495c50fac23724b64e5cc828065e98de53338f8a8bebae64cbeaee16dc",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/move_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_ice_queen/move_0.png",
+      "sha256": "f1d837119bd96ecc824a5866bd3beac26228897b7b2a53372fc8db062a2da718",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/move_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_ice_queen/move_1.png",
+      "sha256": "9ee46adb9b97f11ee68537c0c6d1153bc4842cb140311ddf4e091539c3ab7d36",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/attack_0.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_ice_queen/attack_0.png",
+      "sha256": "d6e1c683587314b4576fd04fb8568aa806af5f054a0c828120bfbc0844308932",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/attack_1.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_ice_queen/attack_1.png",
+      "sha256": "9c240c79c4114434574ffa2520e32989efcf5d5e16854eb47c7fc17a67e32820",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/hit.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_ice_queen/hit.png",
+      "sha256": "38c845ad96511a3a092ed2ca643d1a33094308904b85fe0e739bcb6699cddc7a",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/stun.png",
+      "kind": "bosses",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/sprites/v2/bosses/boss_ice_queen/stun.png",
+      "sha256": "c014ef5e7f987af17d37f832ae147ddf3ea4bc20218fc2e3337b22b537f58d73",
+      "anchor_px": [
+        32,
+        62
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 14
+      }
+    },
+    {
+      "path": "assets/gba/v1/bosses/boss_ice_queen/atlas.png",
+      "kind": "atlas",
+      "size_px": [
+        256,
+        128
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "",
+      "sha256": "bb54474bece8213e4bb60a676f3b6207a7bdcad120e43bf913ed2947b5bcb241",
+      "anchor_px": [
+        32,
+        62
+      ]
+    },
+    {
+      "path": "assets/gba/v1/characters/mage_down_0.png",
+      "kind": "character",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "original_64px_pixel_draw",
+      "sha256": "1d9d660c85144f5e23533ceae2c73b69962bd00b91327c1e09715955346d2232",
+      "anchor_px": [
+        32,
+        59
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 8
+      }
+    },
+    {
+      "path": "assets/gba/v1/characters/mage_down_1.png",
+      "kind": "character",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "original_64px_pixel_draw",
+      "sha256": "1d9d660c85144f5e23533ceae2c73b69962bd00b91327c1e09715955346d2232",
+      "anchor_px": [
+        32,
+        59
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 8
+      }
+    },
+    {
+      "path": "assets/gba/v1/characters/mage_up_0.png",
+      "kind": "character",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 12,
+      "alpha": "binary",
+      "source": "original_64px_pixel_draw",
+      "sha256": "d3accf939bc004c8d8f23100d49fb502c2acf1800720380916ec5485c7532c09",
+      "anchor_px": [
+        32,
+        59
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 8
+      }
+    },
+    {
+      "path": "assets/gba/v1/characters/mage_up_1.png",
+      "kind": "character",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 12,
+      "alpha": "binary",
+      "source": "original_64px_pixel_draw",
+      "sha256": "d3accf939bc004c8d8f23100d49fb502c2acf1800720380916ec5485c7532c09",
+      "anchor_px": [
+        32,
+        59
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 8
+      }
+    },
+    {
+      "path": "assets/gba/v1/characters/mage_left_0.png",
+      "kind": "character",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "original_64px_pixel_draw",
+      "sha256": "030ecf5beed405791f21214326c889c2cb28603fde486a60809f4ad391f58b0d",
+      "anchor_px": [
+        32,
+        59
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 8
+      }
+    },
+    {
+      "path": "assets/gba/v1/characters/mage_left_1.png",
+      "kind": "character",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "original_64px_pixel_draw",
+      "sha256": "030ecf5beed405791f21214326c889c2cb28603fde486a60809f4ad391f58b0d",
+      "anchor_px": [
+        32,
+        59
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 8
+      }
+    },
+    {
+      "path": "assets/gba/v1/characters/mage_right_0.png",
+      "kind": "character",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "original_64px_pixel_draw",
+      "sha256": "56c4e25c9472924fd0085f564b0258248672635fbf4db73b8585f8420d48348f",
+      "anchor_px": [
+        32,
+        59
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 8
+      }
+    },
+    {
+      "path": "assets/gba/v1/characters/mage_right_1.png",
+      "kind": "character",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 13,
+      "alpha": "binary",
+      "source": "original_64px_pixel_draw",
+      "sha256": "56c4e25c9472924fd0085f564b0258248672635fbf4db73b8585f8420d48348f",
+      "anchor_px": [
+        32,
+        59
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 8
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/abyss_shrine/floor_0.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/abyss_shrine/floor_0.png",
+      "sha256": "614a0fe1bac46f7434052901bdca5051260d4703fa74930111acd61a3c71f27e",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/abyss_shrine/floor_1.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/abyss_shrine/floor_1.png",
+      "sha256": "c5d25e6d1ace087dec0594137307025e510f05cfad1f3d7e503b65d9738bad7d",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/abyss_shrine/floor_2.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/abyss_shrine/floor_2.png",
+      "sha256": "52f8a7c52cef6247756370e04446433cf57d2aff8c4744f737d1c16c527fd637",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/abyss_shrine/floor_3.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/abyss_shrine/floor_3.png",
+      "sha256": "8cdd8c5ea827fa30785e1c835f1c290fe43ef18a6e7e841993bf576628c8b8c4",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/abyss_shrine/wall_0.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/abyss_shrine/wall_0.png",
+      "sha256": "6c4c284d134d9bc0f78ab8d9e44e893034b61e4f57060d10e42989d29c1499f1",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/abyss_shrine/wall_1.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/abyss_shrine/wall_1.png",
+      "sha256": "3359495c86c0424af67af63711eb75226719ddb3fbb41f7bbd019ec92c70beb7",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/abyss_shrine/wall_2.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/abyss_shrine/wall_2.png",
+      "sha256": "1afed2174f0a21b9ca5c9f92bd642c602b014bf9f1dcbfe0cf414a49cb1befbd",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/abyss_shrine/wall_3.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/abyss_shrine/wall_3.png",
+      "sha256": "73e358fefc1e44ad6cc2ed8f31da03f3bb4741cf9625853e342a7c8334b88e0e",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/cursed_stone/floor_0.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/cursed_stone/floor_0.png",
+      "sha256": "24da304b8f74785590c2af9477420cd4b19b6d4d1674e6ccb94d920ed9de7036",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/cursed_stone/floor_1.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/cursed_stone/floor_1.png",
+      "sha256": "859c08a80d3f36fb532dc65c6710a500b5fcf41f7105a6e7d3fb2b74dd28391d",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/cursed_stone/floor_2.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/cursed_stone/floor_2.png",
+      "sha256": "4a1afe0d2915cf56d951e29fc51f15be7c390aba098b440e67045cc618957a3e",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/cursed_stone/floor_3.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/cursed_stone/floor_3.png",
+      "sha256": "a0c4b1cb5d524d6ff56443de9b11b738d761c055d2f8f43b6c109bf5407487df",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/cursed_stone/wall_0.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/cursed_stone/wall_0.png",
+      "sha256": "87dfc04738c923a36be22c46be28e5b2f2c241bf3191ac9418fda8e87dd03f41",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/cursed_stone/wall_1.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/cursed_stone/wall_1.png",
+      "sha256": "f75abda9a365c091d62efa6e2134b5f0e0a003710481a3fbd6979a6bade55191",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/cursed_stone/wall_2.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/cursed_stone/wall_2.png",
+      "sha256": "8458422da69d73f2d6c26d47250d81b79f6320696bc0d672887c26f68b4a9484",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/cursed_stone/wall_3.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/cursed_stone/wall_3.png",
+      "sha256": "c851f3742ab1acf22666597b89f941293010c870d852278ea5ce61898b7feca0",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/holy_ruins/floor_0.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/holy_ruins/floor_0.png",
+      "sha256": "9e57ba73459d734928f48d89482113f99717ad83c0e185c48f40ce16f7764b6b",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/holy_ruins/floor_1.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/holy_ruins/floor_1.png",
+      "sha256": "b34bdd0433fb4d8f43091b989cba42d1d200f837bc7808e2c8ee7af57d3dab54",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/holy_ruins/floor_2.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/holy_ruins/floor_2.png",
+      "sha256": "bbc860713a7093a72933af73edeeb51ef1692cf8731ebe6481042c7f74063b9d",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/holy_ruins/floor_3.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/holy_ruins/floor_3.png",
+      "sha256": "83baabfebed6f0ad92a65f4a5944f81dc4aab3be35930afcda97be6e60018dc8",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/holy_ruins/wall_0.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/holy_ruins/wall_0.png",
+      "sha256": "e1ef963a6c6ae15e373d0cbd82e0f5fa5fde9dc81b34c0a09214f5a5d46fb524",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/holy_ruins/wall_1.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/holy_ruins/wall_1.png",
+      "sha256": "e1d1c0f7d69568830fac60a9c39b54f10e99c6f4708c2d616bacc20cfece9da6",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/holy_ruins/wall_2.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/holy_ruins/wall_2.png",
+      "sha256": "5039d14b988615f674e5891c28193e65dba551356356d3c7056d9b79a315074d",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/holy_ruins/wall_3.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/holy_ruins/wall_3.png",
+      "sha256": "733d30dc0ccbfce8868eb08a3631e45660b6674fb696fc87d4c56607bde9ea01",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/ice_sanctum/floor_0.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/ice_sanctum/floor_0.png",
+      "sha256": "1b1542a684aa190c82849861930465d7d7bf8d5f704b21d11246b7626d553cf5",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/ice_sanctum/floor_1.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/ice_sanctum/floor_1.png",
+      "sha256": "948a9e4211869be6584ebadb43439a68d4ef3349eb7c9378db4f743f48decf15",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/ice_sanctum/floor_2.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/ice_sanctum/floor_2.png",
+      "sha256": "bf8e5a0a1c10424fa1cd50defed85d54aa326192fc28a639614f171e7e3c87e2",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/ice_sanctum/floor_3.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/ice_sanctum/floor_3.png",
+      "sha256": "ec04ca6e6b773135cbb29d508dcef28436c455bf53c52f1ea7e33b2af7c83789",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/ice_sanctum/wall_0.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/ice_sanctum/wall_0.png",
+      "sha256": "efcb8d3700f08c4dd300d4f1cbe4e63ccd447fc378ce1207ee69eb69a806344e",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/ice_sanctum/wall_1.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/ice_sanctum/wall_1.png",
+      "sha256": "c5c6fb781ef7c8973115b7c932be7ec9fd73108cc398ff5f71829f9a3a9d6f23",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/ice_sanctum/wall_2.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/ice_sanctum/wall_2.png",
+      "sha256": "c99615c952e864407825925181f59c99b06c7fec7e10fe118a57b81924bc3a25",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/ice_sanctum/wall_3.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/ice_sanctum/wall_3.png",
+      "sha256": "ba6a0938199b48bb64445411c806ec0c0b71ed53924c48af4db1203c4816b4fa",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/lava_temple/floor_0.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/lava_temple/floor_0.png",
+      "sha256": "a334b0cce2dab1c65717305660ce5767796e55faa4a9f39c6223da3a0ced73c5",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/lava_temple/floor_1.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/lava_temple/floor_1.png",
+      "sha256": "4fdde9d5b382d5d4f4c4f68ee7c4ca17054814b0215ef162bf1a5c9f1b6ca748",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/lava_temple/floor_2.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/lava_temple/floor_2.png",
+      "sha256": "9e91b08af8ae939cc5689180d622c7ff4f1c3ae967f68bc591b18bbe672d59ee",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/lava_temple/floor_3.png",
+      "kind": "floor",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/lava_temple/floor_3.png",
+      "sha256": "7bfd9f003abc21e7e9150685dc360b6212f2b2d163b3f77bccbb7a690ca76dff",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": false,
+        "blocks_projectiles": false
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/lava_temple/wall_0.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/lava_temple/wall_0.png",
+      "sha256": "8ebb4739ee628e16c0d7db1924476af56b8e67892a0cefaca77dae1ba7915ba5",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/lava_temple/wall_1.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/lava_temple/wall_1.png",
+      "sha256": "5786fc004a464598a02921c20b594b202778a46d9c9ea2032ed2167555f2fca6",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/lava_temple/wall_2.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/lava_temple/wall_2.png",
+      "sha256": "8c38c3b65cf7ba4e9bbafa11688e2964ecf678bc22269bf0bb429046d7918e47",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/tiles/lava_temple/wall_3.png",
+      "kind": "wall",
+      "size_px": [
+        32,
+        32
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/tiles/lava_temple/wall_3.png",
+      "sha256": "3d679242fbab042aca89c399ddae77cd6dfb5e286154446d49236ae74b9b03a4",
+      "anchor_px": [
+        0,
+        0
+      ],
+      "collision": {
+        "blocks_movement": true,
+        "blocks_projectiles": true
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/amethyst_crystal_cluster.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/amethyst_crystal_cluster.png",
+      "sha256": "bb1468c64832206227029ab18285027a694861f66204ecd36322f27cdb5f0145",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/arcane_brazier.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/arcane_brazier.png",
+      "sha256": "8161d7b1b6836811e96d945175471ccc73df1d859592131f61a85e8f22dbd3ed",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/azure_crystal_cluster.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/azure_crystal_cluster.png",
+      "sha256": "659da3db8c65bd965c118f7a228f1e2134da774308bfabeeb816c81719d96716",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/broken_pillar.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/broken_pillar.png",
+      "sha256": "1fe77c946c679e20312bfa53eded3028054999467a5219fa8ba50013a0208361",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/chained_barrel.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/chained_barrel.png",
+      "sha256": "4e0ecd9fda1aa1a85462e8d336ba4776e42fcc0fde4718a67d7039a4bae97982",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/cursed_crate.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/cursed_crate.png",
+      "sha256": "2afb440f3cbef52ca43236a4656d7c4cf40703051bf1e7e2dee240f9890f46c2",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/iron_barrel.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/iron_barrel.png",
+      "sha256": "25cc1cf36d75eb8b0ff938f0afa5110fe81bd9f6db1c4367a5c3e8770d874868",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/rune_boulder.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/rune_boulder.png",
+      "sha256": "44de19936aa58988dbcf61541010a4c659602b975343b694920fdb1bffbc74ba",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/rune_core_boulder.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/rune_core_boulder.png",
+      "sha256": "d615ac75cff0a62373b4e9b9cb16ac108d87f715339ff253a0a693f4036624fb",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/rune_crate.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/rune_crate.png",
+      "sha256": "6b044e42aae318f2a98ce8af1f1623c7437ed64d2ce860d92cf5ced1279ac4a3",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/rune_pillar.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/rune_pillar.png",
+      "sha256": "44399503a8a4d2ab105ea6950c8eaa48556c4fdccb312ac94d599c920867da7d",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/props/violet_brazier.png",
+      "kind": "prop",
+      "size_px": [
+        64,
+        64
+      ],
+      "colors_rgba": 16,
+      "alpha": "binary",
+      "source": "assets/environment/v2/props/violet_brazier.png",
+      "sha256": "0fcc1fceb2c22ca1b84f9ef3cc70f152bccd663c2be38a59810c856408bb441c",
+      "anchor_px": [
+        32,
+        60
+      ],
+      "collision": {
+        "shape": "circle",
+        "radius_px": 16
+      }
+    },
+    {
+      "path": "assets/gba/v1/icons/neutral.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "ea03b5152d16b6310dbed1bc375be0c1ab321cb04b333a2042eed522737adfcc",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/icons/fire.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "450d290ce35c47d77efeee9c6601c96b8041b00712956e72a8fffe708bfe3c52",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/icons/water.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "821d5550a242daa0b5748bf097e3aa0d46926155ee06ad676a491adfd7aa5060",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/icons/ice.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "d35331f8684234987776df37017545c426a9ee9d1b4a8ade3aab7ac6d4622698",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/icons/lightning.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "93642242cbab690991bb3661eab24351f3cf7cb28d1440292af0882fd167d699",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/icons/wind.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "066a063340f55a30233bfed6f30d0dfc15f17a7cd95d973caa0c8f6de42982cc",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/icons/earth.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "aea2742e4fa8c3d6914cb62e3921255985614878fcba49d79ebf48459c08b0a4",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/icons/light.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "9519cf61cd6c99c5e9dc99e9bd029b535e88e4537543ebb943f647cee92c0521",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/icons/dark.png",
+      "kind": "icon",
+      "size_px": [
+        24,
+        24
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "original_24px_pixel_draw",
+      "sha256": "52ea44ed6f1361062853ae8ccf9c9569dc2b534d6f0de2806a9fc2e9280b0b11",
+      "anchor_px": [
+        12,
+        12
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/dark_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/dark_0.png",
+      "sha256": "d37e3cfe2bf080c1994b1b3a3bacf4ec8923cc8322ca1568d8a8fe8b01f8a04c",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/earth_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/earth_0.png",
+      "sha256": "0b48190dc407691cfe325c9463142a4ada3d8ec7757502da1ee29edc71b4aab8",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/earth_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/earth_1.png",
+      "sha256": "0b48190dc407691cfe325c9463142a4ada3d8ec7757502da1ee29edc71b4aab8",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/enemy_laser_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/enemy_laser_0.png",
+      "sha256": "3ee47b26b858af6dda988f6e36e9d3b314bffaf5c00ddc5a66a3e572d0a446be",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/enemy_laser_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/enemy_laser_1.png",
+      "sha256": "75c6e0cd7b3fce245313531fbe27bc547ac51850a1fa41b2b22789640acb6bda",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/enemy_orb_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/enemy_orb_0.png",
+      "sha256": "9232897b1d47cc38ff472b9f6a3301e3934a4078c3eca2ad998f8c52851a7c61",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/enemy_orb_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/enemy_orb_1.png",
+      "sha256": "90a88414439b69d7e6b9c0ef15b5f231a0ab47496c38d0d170cdc90dd72e93d2",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/enemy_ring_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/enemy_ring_0.png",
+      "sha256": "730cf35bdcb70d38905045ceca2782d8467ddfd05ca2e6d6a365044ccbf9b97c",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/enemy_ring_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/enemy_ring_1.png",
+      "sha256": "730cf35bdcb70d38905045ceca2782d8467ddfd05ca2e6d6a365044ccbf9b97c",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fire_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fire_0.png",
+      "sha256": "a320f32dbd8ed5b3909f793af3cba810ecb126f6641b1b4a4c628cc70505176f",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fire_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fire_1.png",
+      "sha256": "a320f32dbd8ed5b3909f793af3cba810ecb126f6641b1b4a4c628cc70505176f",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_dark_earth.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_dark_earth.png",
+      "sha256": "24fc07e9e83c4807c6223b407d8463b58a1f7015aea655c226a53060cc3c48c4",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_dark_fire.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_dark_fire.png",
+      "sha256": "da9e2b37d0b8a89ae8ec9adf290d78ee1d92885b0ad6048c20b6766999e5ead9",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_dark_ice.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_dark_ice.png",
+      "sha256": "aa21595d289a9bc0fd5e8968f29e41fee90c5606838628a0aaf67f8377d0c3b2",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_dark_light.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_dark_light.png",
+      "sha256": "4f12abe511e15b48f33c7c41416df5726693f56b3152c7d4cbd9a52a7d9cb85c",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_dark_lightning.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_dark_lightning.png",
+      "sha256": "dbf61c4d3b31abc8151168691c2f9b515dd1df1537a5e9b9e0c73b88cee3010b",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_dark_water.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_dark_water.png",
+      "sha256": "4065c15b76f50bda18af51b4af6833f53a69b27099c2654731fd425e417ecfdf",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_dark_wind.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_dark_wind.png",
+      "sha256": "19e284e5ee65290834871d13018fbf0f596db299bc37b13ee663dbbf0f65bf03",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_earth_fire.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_earth_fire.png",
+      "sha256": "8981cba36e8df286c5ba986e04d1951faf38a78ef0274d05c0669ba26dc57ff0",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_earth_ice.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_earth_ice.png",
+      "sha256": "c545fc1412b2972825d6fd660dd114ad3209cea69f7884757585106d08b51e55",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_earth_light.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_earth_light.png",
+      "sha256": "6e233c542c69486e1b72bf3df7126014d85b7916cc209ea6d0454cd42d7dfb5f",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_earth_lightning.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_earth_lightning.png",
+      "sha256": "dd2d5e54053b83d3f9818e3df6379b6cbb0cfe9c7257cf0549ad87eb528d79bf",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_earth_water.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_earth_water.png",
+      "sha256": "a59fca015f6f6726b5a835835a01f1232f0188a6fbf081ea09ec0c89ed8743be",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_earth_wind.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_earth_wind.png",
+      "sha256": "5465b8f66b9e4caf68be45405dab998efded9f7fd9c44013a280928ba928a3fb",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_fire_ice.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_fire_ice.png",
+      "sha256": "dd81c1873637004a2dff804d00664f2d76e00bf40fde685bd8fb39ceef484cb4",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_fire_light.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_fire_light.png",
+      "sha256": "28f67eacd488ec42f255b381dda8549891f98f8e10c7279ced9272ec5f11f0ed",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_fire_lightning.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_fire_lightning.png",
+      "sha256": "f2ae4ffb20fe7eb35dc568ea57d4a3347a85f9fc83551ef71c91c12335f646d0",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_fire_water.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_fire_water.png",
+      "sha256": "4daa56711d93ee8a1dd4db029a57836317e22e61d772b7714cf152b69092afa0",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_fire_wind.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 5,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_fire_wind.png",
+      "sha256": "c9df84025bad5ac056ef1fb419d1baaafefdcb0903adfb6e14f7edbadfbfab07",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_ice_light.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_ice_light.png",
+      "sha256": "0990d324db9d6aab55491a04c3c7e6539b024f36435d7de48fdb3c3790f04ba1",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_ice_lightning.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_ice_lightning.png",
+      "sha256": "04834d0f09d2f32416716def046e99df693e0609e7afabf10e13fa5169967ac7",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_ice_water.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_ice_water.png",
+      "sha256": "ea414c6126c189041ed5f91534a506eef18ac0961fafc83d6d6935abd691e232",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_ice_wind.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_ice_wind.png",
+      "sha256": "7cea2d81ce840c84e06342811f9572a02883a2cca5e74cd756785d153c44e708",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_light_lightning.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_light_lightning.png",
+      "sha256": "10eb6275335acda376f1824c71f8fff23d77799798e7fb06a7cb6076742c8d77",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_light_water.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_light_water.png",
+      "sha256": "527793000f7136c40a9ddc094c6cec2dc53b2a4ef69da778d850533cfa098bc2",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_light_wind.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 14,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_light_wind.png",
+      "sha256": "e4175265f2c4558cdf5975da4b6d45e0fb1015acd72c7aa0fbe659c4148b25e6",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_lightning_water.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_lightning_water.png",
+      "sha256": "4fcd64f4b95f2291a5f41f2fcda4ff865919b1fe115e2cd433e948028bf3b21f",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_lightning_wind.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_lightning_wind.png",
+      "sha256": "d591634505bda1651714acf9e31e7d5388a97c7650f9280105512b82e5118542",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/fusion_water_wind.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/fusion_water_wind.png",
+      "sha256": "3e943bc1669ca6844b85417233d9e9826a3405c2b34ce232b63a3ab5b024466c",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/ice_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/ice_0.png",
+      "sha256": "86438c391781e58be7d1723361f2f9197c92336fc87ba3a52059fede33dc2f3d",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/ice_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/ice_1.png",
+      "sha256": "86438c391781e58be7d1723361f2f9197c92336fc87ba3a52059fede33dc2f3d",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/light_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/light_0.png",
+      "sha256": "b3639bf7e16a89b55cb16950e43bcd5e3dd365fb8911985051f3571c17d4a19c",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/lightning_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/lightning_0.png",
+      "sha256": "99b43725c9c9c7c056161b1ca16aaac773617caa4d66f234ea0f2ddbed7549fe",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/lightning_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/lightning_1.png",
+      "sha256": "99b43725c9c9c7c056161b1ca16aaac773617caa4d66f234ea0f2ddbed7549fe",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/neutral_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 15,
+      "alpha": "binary",
+      "source": "assets/projectiles/neutral_0.png",
+      "sha256": "c48c08e00c8fea550dc14faa5e02bdb50a7082ac50e0f3a03f3f1a25ef8d5d9f",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/water_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/water_0.png",
+      "sha256": "f59f0973f61d596a391cbdfde41ded790a268feb6bb107b03f88f7ef1f644cbf",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/water_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 4,
+      "alpha": "binary",
+      "source": "assets/projectiles/water_1.png",
+      "sha256": "f59f0973f61d596a391cbdfde41ded790a268feb6bb107b03f88f7ef1f644cbf",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/wind_0.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/wind_0.png",
+      "sha256": "5a86486e6a419bb2259f58fa77a4c67884fea2d1f68decc1c81ed97db35a979b",
+      "anchor_px": [
+        8,
+        8
+      ]
+    },
+    {
+      "path": "assets/gba/v1/projectiles/wind_1.png",
+      "kind": "projectile",
+      "size_px": [
+        16,
+        16
+      ],
+      "colors_rgba": 3,
+      "alpha": "binary",
+      "source": "assets/projectiles/wind_1.png",
+      "sha256": "5a86486e6a419bb2259f58fa77a4c67884fea2d1f68decc1c81ed97db35a979b",
+      "anchor_px": [
+        8,
+        8
+      ]
+    }
+  ]
+}
